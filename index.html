@@ -385,16 +385,81 @@
       background: var(--gold-light);
       border-radius: 2px;
     }
+.investor-section {
+  background:
+    linear-gradient(
+      135deg,
+      #20272c 0%,
+      #303b41 100%
+    );
+  color: white;
+  border-bottom: 0;
+}
 
+.investor-grid {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 50px;
+  align-items: center;
+}
+
+.investor-section h2 {
+  color: white;
+  max-width: 760px;
+}
+
+.investor-copy {
+  max-width: 820px;
+}
+
+.investor-text {
+  margin: 18px 0 0;
+  max-width: 760px;
+  color: #d8dee1;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.investor-button {
+  display: inline-block;
+  min-width: 220px;
+  padding: 16px 24px;
+  border: 1px solid var(--gold-light);
+  border-radius: 7px;
+  color: var(--gold-light);
+  text-decoration: none;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.investor-button:hover {
+  background: var(--gold-light);
+  color: var(--charcoal);
+}
+
+.investor-disclaimer {
+  max-width: var(--max);
+  margin: 34px auto 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,0.13);
+  color: #98a3a9;
+  font-size: 10px;
+  line-height: 1.6;
+}
     @media (max-width: 900px) {
-      .hero-grid,
-      .about-grid,
-      .project-grid,
-      .project-copy,
-      .safety-box,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
+.hero-grid,
+.about-grid,
+.project-grid,
+.project-copy,
+.safety-box,
+.contact-grid,
+.investor-grid {
+  grid-template-columns: 1fr;
+}
 
       .cards {
         grid-template-columns: 1fr;
@@ -466,8 +531,9 @@
     <nav>
       <a href="#about">About</a>
       <a href="#operations">Operations</a>
-      <a href="#holleton">Holleton</a>
-      <a href="#safety">Safety</a>
+<a href="#holleton">Holleton</a>
+<a href="#partnerships">Partnerships</a>
+<a href="#safety">Safety</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -666,7 +732,71 @@
     </div>
   </section>
 
+<section
+  id="partnerships"
+  class="investor-section"
+>
 
+  <div class="investor-grid">
+
+    <div class="investor-copy">
+
+      <p class="eyebrow">
+        Strategic Capital & Partnerships
+      </p>
+
+      <h2>
+        Building the next stage of VAA Resources
+      </h2>
+
+      <p class="investor-text">
+        VAA Resources is open to confidential
+        discussions with strategic partners,
+        financiers and experienced investors
+        interested in the future development
+        of resource reprocessing opportunities
+        in Western Australia.
+      </p>
+
+      <p class="investor-text">
+        We welcome enquiries from parties who
+        may bring capital, technical capability,
+        project opportunities or strategic
+        alignment to VAA's development.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <a
+        class="investor-button"
+        href="mailto:Steve@VAAResources.com?subject=Confidential%20Strategic%20Enquiry%20-%20VAA%20Resources"
+      >
+        CONFIDENTIAL ENQUIRY →
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="investor-disclaimer">
+
+    This website is provided for general
+    corporate information only. Nothing on
+    this website constitutes an offer,
+    invitation or recommendation to acquire
+    securities in VAA Resources Pty Ltd.
+    Any securities-related discussion would
+    occur separately and only where permitted
+    by applicable law and under appropriate
+    documentation.
+
+  </div>
+
+</section>
   <section id="safety" class="alt">
     <div class="content">
 

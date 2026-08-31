@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-029JV4R2LW"></script>
@@ -13,30 +13,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#20272c">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="VAA Resources Pty Ltd">
 
-  <title>VAA Resources Pty Ltd | Western Australian Resource Development</title>
+  <title>VAA Resources | Western Australian Gold Projects &amp; Reprocessing</title>
   <meta
     name="description"
-    content="VAA Resources Pty Ltd is a Western Australian resources company focused on mineral reprocessing, project development and responsible site operations, including the Holleton Laterite Project."
+    content="VAA Resources evaluates Western Australian gold projects, gold reprocessing opportunities and alternative non-chemical mineral processing approaches, including the Holleton Gold Project."
   >
   <link rel="canonical" href="https://www.vaaresources.com/">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
   <meta property="og:site_name" content="VAA Resources">
-  <meta property="og:title" content="VAA Resources Pty Ltd | Western Australian Resource Development">
-  <meta property="og:description" content="Mineral reprocessing, project development and responsible site operations in Western Australia.">
+  <meta property="og:title" content="VAA Resources | Western Australian Gold Projects &amp; Reprocessing">
+  <meta property="og:description" content="Western Australian gold projects, gold reprocessing and evaluation of alternative non-chemical mineral processing approaches.">
   <meta property="og:url" content="https://www.vaaresources.com/">
   <meta property="og:image" content="https://www.vaaresources.com/images/holleton-3d-hero.webp">
-  <meta property="og:image:alt" content="Three-dimensional survey view of the Holleton Laterite Project">
+  <meta property="og:image:alt" content="Three-dimensional survey of the Holleton Gold Project in Western Australia">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="VAA Resources Pty Ltd | Western Australian Resource Development">
-  <meta name="twitter:description" content="Mineral reprocessing, project development and responsible site operations in Western Australia.">
+  <meta name="twitter:title" content="VAA Resources | Western Australian Gold Projects &amp; Reprocessing">
+  <meta name="twitter:description" content="Gold project development, gold reprocessing and evaluation of alternative non-chemical processing approaches in Western Australia.">
   <meta name="twitter:image" content="https://www.vaaresources.com/images/holleton-3d-hero.webp">
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate icon" type="image/jpeg" href="/images/vaa-resources-logo.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.vaaresources.com/#organization",
+        "name": "VAA Resources Pty Ltd",
+        "legalName": "VAA Resources Pty Ltd",
+        "url": "https://www.vaaresources.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.vaaresources.com/images/vaa-resources-logo.jpg"
+        },
+        "description": "A Western Australian resources company evaluating gold projects, gold reprocessing opportunities and alternative non-chemical mineral processing approaches.",
+        "email": "Steve@VAAResources.com",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "ABN",
+          "value": "17 698 155 912"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Perth",
+          "addressRegion": "WA",
+          "addressCountry": "AU"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Western Australia"
+        },
+        "knowsAbout": [
+          "Western Australian gold projects",
+          "gold reprocessing",
+          "gold project development",
+          "private gold project investment",
+          "mineral processing",
+          "non-chemical mineral processing",
+          "resource reprocessing"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.vaaresources.com/#website",
+        "url": "https://www.vaaresources.com/",
+        "name": "VAA Resources",
+        "publisher": {
+          "@id": "https://www.vaaresources.com/#organization"
+        },
+        "inLanguage": "en-AU"
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -79,6 +137,10 @@
       color: inherit;
     }
 
+    section[id] {
+      scroll-margin-top: 105px;
+    }
+
     header {
       position: sticky;
       top: 0;
@@ -119,7 +181,8 @@
       letter-spacing: 0.02em;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a:focus-visible {
       color: var(--gold);
     }
 
@@ -149,7 +212,7 @@
 
     .hero h1 {
       margin: 0;
-      max-width: 700px;
+      max-width: 720px;
       font-size: clamp(40px, 6vw, 66px);
       line-height: 1.02;
       letter-spacing: -0.035em;
@@ -157,7 +220,7 @@
 
     .hero p {
       margin: 22px 0 0;
-      max-width: 670px;
+      max-width: 700px;
       color: #d9dfe2;
       font-size: 19px;
       line-height: 1.7;
@@ -199,7 +262,7 @@
     }
 
     .section-head {
-      max-width: 820px;
+      max-width: 850px;
       margin-bottom: 34px;
     }
 
@@ -290,6 +353,33 @@
       margin: 0;
       color: var(--muted);
       font-size: 14px;
+    }
+
+    .evaluation-box {
+      margin-top: 26px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 0.42fr 1fr;
+      gap: 30px;
+      align-items: start;
+      border: 1px solid #e2cf9c;
+      border-left: 5px solid var(--gold-light);
+      border-radius: 12px;
+      background: #fffaf0;
+    }
+
+    .evaluation-box h3 {
+      margin: 0;
+      color: var(--charcoal);
+      font-size: 23px;
+      line-height: 1.25;
+    }
+
+    .evaluation-box p {
+      margin: 0;
+      color: #5e6265;
+      font-size: 16px;
+      line-height: 1.75;
     }
 
     .status-strip {
@@ -400,16 +490,16 @@
 
     .investor-section h2 {
       color: white;
-      max-width: 760px;
+      max-width: 800px;
     }
 
     .investor-copy {
-      max-width: 820px;
+      max-width: 850px;
     }
 
     .investor-text {
       margin: 18px 0 0;
-      max-width: 760px;
+      max-width: 800px;
       color: #d8dee1;
       font-size: 17px;
       line-height: 1.75;
@@ -427,9 +517,11 @@
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 0.08em;
+      transition: background 0.2s ease, color 0.2s ease;
     }
 
-    .investor-button:hover {
+    .investor-button:hover,
+    .investor-button:focus-visible {
       background: var(--gold-light);
       color: var(--charcoal);
     }
@@ -439,9 +531,9 @@
       margin: 34px auto 0;
       padding-top: 22px;
       border-top: 1px solid rgba(255,255,255,0.13);
-      color: #98a3a9;
+      color: #a8b2b7;
       font-size: 10px;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .safety-box {
@@ -511,7 +603,8 @@
       text-decoration: none;
     }
 
-    footer a:hover {
+    footer a:hover,
+    footer a:focus-visible {
       color: var(--gold-light);
     }
 
@@ -526,6 +619,7 @@
     @media (max-width: 900px) {
       .hero-grid,
       .about-grid,
+      .evaluation-box,
       .project-grid,
       .project-copy,
       .safety-box,
@@ -594,6 +688,7 @@
         min-height: 240px;
       }
 
+      .evaluation-box,
       .safety-box {
         padding: 26px;
       }
@@ -637,19 +732,24 @@
   <section class="hero">
     <div class="hero-grid">
       <div>
-        <p class="eyebrow">Western Australia</p>
-        <h1>Responsible Resource Development</h1>
+        <p class="eyebrow">Western Australian Gold Projects</p>
+        <h1>Gold Reprocessing &amp; Responsible Project Development</h1>
         <p>
-          VAA Resources Pty Ltd is a Western Australian resources company
-          focused on mineral reprocessing, project development and practical,
-          responsible site operations.
+          VAA Resources Pty Ltd is evaluating Western Australian gold projects
+          and mineral reprocessing opportunities, with a focus on previously mined
+          gold-bearing material, practical site development and responsible operations.
         </p>
         <div class="gold-line"></div>
       </div>
 
       <div class="hero-image">
-        <img src="/images/holleton-3d-hero.webp" alt="Three-dimensional survey view of the Holleton Laterite Project">
-        <div class="hero-caption">Holleton Laterite Project — three-dimensional site survey view</div>
+        <img
+          src="/images/holleton-3d-hero.webp"
+          alt="Three-dimensional survey of the Holleton Gold Project in Western Australia"
+          fetchpriority="high"
+          decoding="async"
+        >
+        <div class="hero-caption">Holleton Gold Project — three-dimensional site survey view</div>
       </div>
     </div>
   </section>
@@ -659,22 +759,27 @@
       <div class="about-grid">
         <div class="about-copy">
           <p class="eyebrow">About VAA Resources</p>
-          <h2>Practical project development, from assessment to operation</h2>
+          <h2>Practical gold project development, from evaluation to operation</h2>
           <p>
             VAA Resources Pty Ltd is an Australian resources company based in
-            Western Australia. The company is developing projects focused on
-            the recovery and reprocessing of previously mined mineral resources
-            using practical, efficient and responsible operating methods.
+            Western Australia. The company is evaluating gold reprocessing
+            opportunities focused on the recovery of value from previously mined
+            and historically treated gold-bearing material.
           </p>
           <p>
-            VAA combines project development, field operations, mineral
-            processing, site assessment and technical management to progress
-            resource projects from evaluation through to operation.
+            VAA combines project development, field operations, mineral processing,
+            site assessment and technical management to progress selected resource
+            opportunities through evaluation, approvals, preparation and operation.
           </p>
         </div>
 
         <div class="about-image">
-          <img src="/images/holleton-3d-secondary.webp" alt="Perspective survey view of the Holleton project area">
+          <img
+            src="/images/holleton-3d-secondary.webp"
+            alt="Terrain model of the Holleton Gold Project and historical mining disturbance"
+            loading="lazy"
+            decoding="async"
+          >
           <div class="image-caption">Detailed project survey and terrain modelling</div>
         </div>
       </div>
@@ -684,53 +789,80 @@
   <section id="operations" class="alt">
     <div class="content">
       <div class="section-head">
-        <p class="eyebrow">Operations</p>
-        <h2>Field capability and processing infrastructure</h2>
+        <p class="eyebrow">Gold Reprocessing Operations</p>
+        <h2>Field capability and mineral processing infrastructure</h2>
         <p class="lead">
           VAA is developing the practical plant, site systems and field capability
-          required to support mineral reprocessing and project operations.
+          required to support gold reprocessing and responsible mineral project operations.
         </p>
       </div>
 
       <div class="cards">
         <article class="card">
           <div class="card-image">
-            <img src="/images/screening-plant.webp" alt="Mobile screening plant">
+            <img
+              src="/images/screening-plant.webp"
+              alt="Mobile screening plant for mineral and gold reprocessing preparation"
+              loading="lazy"
+              decoding="async"
+            >
           </div>
           <div class="card-body">
-            <h3>Screening & Classification</h3>
+            <h3>Screening &amp; Classification</h3>
             <p>
-              Mobile screening and materials-handling equipment supports
-              controlled sizing and preparation of reprocessed material.
+              Mobile screening and materials-handling equipment supports controlled
+              sizing and preparation of previously mined material.
             </p>
           </div>
         </article>
 
         <article class="card">
           <div class="card-image">
-            <img src="/images/wheel-loader.webp" alt="Large wheel loader">
+            <img
+              src="/images/wheel-loader.webp"
+              alt="Wheel loader supporting material handling at a Western Australian resource project"
+              loading="lazy"
+              decoding="async"
+            >
           </div>
           <div class="card-body">
             <h3>Materials Handling</h3>
             <p>
-              Mobile plant supports stockpile management, material movement
-              and site preparation across operating areas.
+              Mobile plant supports stockpile management, material movement and
+              site preparation across operating areas.
             </p>
           </div>
         </article>
 
         <article class="card">
           <div class="card-image">
-            <img src="/images/mobile-crusher.webp" alt="Mobile impact crusher">
+            <img
+              src="/images/mobile-crusher.webp"
+              alt="Mobile impact crusher used for mineral processing preparation"
+              loading="lazy"
+              decoding="async"
+            >
           </div>
           <div class="card-body">
-            <h3>Crushing & Preparation</h3>
+            <h3>Crushing &amp; Preparation</h3>
             <p>
-              Mobile crushing capability is being integrated into the
-              processing pathway for staged material preparation.
+              Mobile crushing capability supports staged material preparation and
+              the evaluation of practical gold reprocessing pathways.
             </p>
           </div>
         </article>
+      </div>
+
+      <div class="evaluation-box" id="processing-evaluation">
+        <div>
+          <p class="eyebrow">Processing Evaluation</p>
+          <h3>Alternative non-chemical mineral processing</h3>
+        </div>
+        <p>
+          VAA is evaluating alternative non-chemical mineral processing approaches
+          for the recovery of value from previously treated gold-bearing materials.
+          This work remains at an evaluation stage.
+        </p>
       </div>
     </div>
   </section>
@@ -738,17 +870,18 @@
   <section id="holleton">
     <div class="content">
       <div class="section-head">
-        <p class="eyebrow">Holleton Laterite Project</p>
-        <h2>Reprocessing a historically disturbed Western Australian gold project</h2>
+        <p class="eyebrow">Holleton Gold Project</p>
+        <h2>A Western Australian gold reprocessing opportunity within established disturbance</h2>
         <p class="lead">
-          VAA Resources is progressing the Holleton Laterite Project, focused on
-          evaluating and reprocessing previously mined and historically treated
-          lateritic material within an established mining area.
+          The Holleton Gold Project is focused on evaluating and reprocessing previously
+          mined and historically treated gold-bearing lateritic material within an
+          established mining area.
         </p>
 
         <div class="project-facts" aria-label="Holleton project facts">
           <span class="project-fact">Western Australia</span>
           <span class="project-fact">Gold reprocessing focus</span>
+          <span class="project-fact">Previously treated material</span>
           <span class="project-fact">Historically disturbed mining area</span>
           <span class="project-fact">M77/643 &amp; M77/898</span>
         </div>
@@ -757,7 +890,7 @@
       <div class="status-strip" aria-label="Project development status">
         <div class="status-item">
           <span>Project</span>
-          <strong>Development</strong>
+          <strong>Evaluation &amp; Development</strong>
         </div>
         <div class="status-item">
           <span>Approvals</span>
@@ -775,24 +908,35 @@
 
       <div class="project-grid">
         <div class="project-panel">
-          <img src="/images/holleton-drilling.webp" alt="Field drilling activities at the Holleton project">
+          <img
+            src="/images/holleton-drilling.webp"
+            alt="Field investigation at the Holleton Gold Project in Western Australia"
+            loading="lazy"
+            decoding="async"
+          >
         </div>
         <div class="project-panel map">
-          <img src="/images/holleton-tenement.webp" alt="Aerial project view showing the Holleton mining area">
+          <img
+            src="/images/holleton-tenement.webp"
+            alt="Aerial view of the Holleton Gold Project and mining tenements M77/643 and M77/898"
+            loading="lazy"
+            decoding="async"
+          >
         </div>
       </div>
 
       <div class="project-copy">
         <p>
-          Project development includes mineral assessment, processing studies,
-          water management, plant configuration, site infrastructure and
-          environmental and regulatory planning.
+          Project work includes mineral assessment, processing studies, water
+          management, plant configuration, site infrastructure and environmental
+          and regulatory planning. VAA is also evaluating alternative non-chemical
+          mineral processing approaches that may be suited to previously treated
+          gold-bearing material.
         </p>
         <p>
-          Field investigation, survey and operational planning are used to
-          progressively refine the project layout and practical requirements for
-          development, with an emphasis on working within established disturbance
-          wherever practicable.
+          Field investigation, survey and operational planning are used to refine
+          the project layout and practical requirements for development, with an
+          emphasis on working within established disturbance wherever practicable.
         </p>
       </div>
     </div>
@@ -801,23 +945,27 @@
   <section id="partnerships" class="investor-section">
     <div class="investor-grid">
       <div class="investor-copy">
-        <p class="eyebrow">Strategic Capital &amp; Partnerships</p>
-        <h2>Building the next stage of VAA Resources</h2>
+        <p class="eyebrow">Gold Project Investment &amp; Partnerships</p>
+        <h2>Confidential discussions for aligned Western Australian gold project development</h2>
         <p class="investor-text">
-          VAA Resources is open to confidential discussions with strategic partners,
-          financiers and sophisticated private investors interested in the future
-          development of resource reprocessing opportunities in Western Australia.
+          VAA Resources welcomes confidential discussions with strategic partners,
+          financiers and sophisticated private investors interested in Western
+          Australian gold projects, gold reprocessing and responsible mineral
+          project development.
         </p>
         <p class="investor-text">
-          We welcome enquiries from parties who may bring capital, technical capability,
-          project opportunities or strategic alignment to VAA's development.
+          We welcome confidential enquiries regarding strategic participation and
+          potential private investment in gold project development from parties who
+          may bring capital, technical capability, processing expertise, project
+          opportunities or strategic alignment.
         </p>
       </div>
 
       <div>
         <a
           class="investor-button"
-          href="mailto:Steve@VAAResources.com?subject=Confidential%20Strategic%20Enquiry%20-%20VAA%20Resources"
+          href="mailto:Steve@VAAResources.com?subject=Confidential%20Gold%20Project%20Enquiry%20-%20VAA%20Resources"
+          onclick="gtag('event','investor_enquiry_click',{'event_category':'engagement','event_label':'partnerships'});"
         >
           CONFIDENTIAL ENQUIRY →
         </a>
@@ -827,9 +975,10 @@
     <div class="investor-disclaimer">
       This website is provided for general corporate information only. Nothing on
       this website constitutes an offer, invitation or recommendation to acquire
-      securities in VAA Resources Pty Ltd. Any securities-related discussion would
-      occur separately and only where permitted by applicable law and under
-      appropriate documentation.
+      securities in VAA Resources Pty Ltd. No investment decision should be made
+      on the basis of this website. Any securities-related discussion would occur
+      separately and only where permitted by applicable law and under appropriate
+      documentation.
     </div>
   </section>
 
@@ -838,18 +987,18 @@
       <div class="safety-box">
         <div>
           <p class="eyebrow">Safety &amp; Compliance</p>
-          <h2>Responsible site systems</h2>
+          <h2>Responsible systems for gold project development</h2>
         </div>
         <div>
           <p>
-            VAA Resources is committed to responsible operations and the
-            systematic management of workplace health and safety, dangerous
-            goods, environmental risks and operational controls.
+            VAA Resources is committed to responsible operations and the systematic
+            management of workplace health and safety, dangerous goods,
+            environmental risks and operational controls.
           </p>
           <p>
-            Site systems and procedures are developed with reference to
-            applicable Western Australian legislation, regulatory requirements,
-            Australian Standards and recognised industry practices.
+            Site systems and procedures are developed with reference to applicable
+            Western Australian legislation, regulatory requirements, Australian
+            Standards and recognised industry practices.
           </p>
         </div>
       </div>
@@ -860,13 +1009,18 @@
     <div class="content">
       <div class="contact-grid">
         <div>
-          <p class="eyebrow">Contact</p>
+          <p class="eyebrow">Corporate &amp; Gold Project Enquiries</p>
           <h2>VAA Resources Pty Ltd</h2>
           <div class="contact-card">
             <p><strong>Western Australia</strong></p>
             <p>
               Email:
-              <a href="mailto:Steve@VAAResources.com">Steve@VAAResources.com</a>
+              <a
+                href="mailto:Steve@VAAResources.com"
+                onclick="gtag('event','corporate_email_click',{'event_category':'engagement','event_label':'contact'});"
+              >
+                Steve@VAAResources.com
+              </a>
             </p>
             <p>ABN: 17 698 155 912</p>
             <p>ACN: 698 155 912</p>
@@ -874,7 +1028,13 @@
         </div>
 
         <div>
-          <img class="contact-logo" src="/images/vaa-resources-logo.jpg" alt="VAA Resources">
+          <img
+            class="contact-logo"
+            src="/images/vaa-resources-logo.jpg"
+            alt="VAA Resources"
+            loading="lazy"
+            decoding="async"
+          >
         </div>
       </div>
     </div>
@@ -883,6 +1043,7 @@
 
 <footer>
   <strong>VAA Resources Pty Ltd</strong><br>
+  Western Australian gold project development and mineral reprocessing<br>
   ABN 17 698 155 912<br>
   <a href="/privacy.html">Privacy</a><br><br>
   © 2026 VAA Resources Pty Ltd. All rights reserved.

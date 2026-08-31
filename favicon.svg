@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="VAA Resources">
+  <rect width="64" height="64" rx="12" fill="#20272c"/>
+  <path d="M9 17h9l14 30L46 17h9L36 55h-8L9 17z" fill="#d2aa37"/>
+  <path d="M22 17h7l3 7 3-7h7L32 39 22 17z" fill="#a82920" opacity="0.95"/>
+</svg>

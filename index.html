@@ -57,6 +57,9 @@
         },
         "description": "A Western Australian resources company evaluating gold projects, gold reprocessing opportunities and alternative non-chemical mineral processing approaches.",
         "email": "corporate@vaaresources.com",
+        "employee": {
+          "@id": "https://www.vaaresources.com/#peter-sworder"
+        },
         "identifier": {
           "@type": "PropertyValue",
           "propertyID": "ABN",
@@ -80,6 +83,25 @@
           "mineral processing",
           "non-chemical mineral processing",
           "resource reprocessing"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.vaaresources.com/#peter-sworder",
+        "name": "Peter Sworder",
+        "jobTitle": "Chief Executive Officer and Director",
+        "image": "https://www.vaaresources.com/images/peter-sworder.svg",
+        "description": "Mechanical engineer and gold-processing project leader with Western Australian gold-processing experience dating from 1984.",
+        "worksFor": {
+          "@id": "https://www.vaaresources.com/#organization"
+        },
+        "knowsAbout": [
+          "gold processing",
+          "historic tailings treatment",
+          "laterite processing",
+          "vat leaching",
+          "plant selection",
+          "project development"
         ]
       },
       {
@@ -473,6 +495,81 @@
       font-size: 16px;
     }
 
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: 0.48fr 1.12fr;
+      gap: 46px;
+      align-items: center;
+    }
+
+    .leadership-photo {
+      max-width: 360px;
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: var(--charcoal);
+      box-shadow: 0 12px 32px rgba(33, 41, 46, 0.09);
+    }
+
+    .leadership-photo img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .leadership-role {
+      margin: 4px 0 20px;
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .leadership-copy > p:not(.eyebrow):not(.leadership-role) {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .leadership-stats {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .leadership-stat {
+      padding: 17px 18px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--white);
+    }
+
+    .leadership-stat strong {
+      display: block;
+      color: var(--charcoal);
+      font-size: 19px;
+      line-height: 1.2;
+    }
+
+    .leadership-stat span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.4;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .leadership-note {
+      margin-top: 14px !important;
+      font-size: 11px !important;
+      color: #7f888d !important;
+    }
+
     .investor-section {
       background: linear-gradient(135deg, #20272c 0%, #303b41 100%);
       color: white;
@@ -622,10 +719,15 @@
       .evaluation-box,
       .project-grid,
       .project-copy,
+      .leadership-grid,
       .safety-box,
       .contact-grid,
       .investor-grid {
         grid-template-columns: 1fr;
+      }
+
+      .leadership-photo {
+        max-width: 300px;
       }
 
       .status-strip {
@@ -693,6 +795,10 @@
         padding: 26px;
       }
 
+      .leadership-stats {
+        grid-template-columns: 1fr;
+      }
+
       .status-strip {
         grid-template-columns: 1fr;
       }
@@ -721,6 +827,7 @@
       <a href="#about">About</a>
       <a href="#operations">Operations</a>
       <a href="#holleton">Holleton</a>
+      <a href="#leadership">Leadership</a>
       <a href="#partnerships">Partnerships</a>
       <a href="#safety">Safety</a>
       <a href="#contact">Contact</a>
@@ -938,6 +1045,60 @@
           the project layout and practical requirements for development, with an
           emphasis on working within established disturbance wherever practicable.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="leadership" class="alt">
+    <div class="content">
+      <div class="leadership-grid">
+        <div class="leadership-photo">
+          <img
+            src="/images/peter-sworder.svg"
+            alt="Peter Sworder, Chief Executive Officer and Director of VAA Resources"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+
+        <div class="leadership-copy">
+          <p class="eyebrow">Leadership</p>
+          <h2>Peter Sworder</h2>
+          <p class="leadership-role">Chief Executive Officer &amp; Director</p>
+          <p>
+            Peter is a mechanical engineer, former airline captain, entrepreneur and
+            gold-processing project leader. His Western Australian gold-processing
+            experience dates from 1984 and includes historic tailings and laterite
+            treatment, conventional vat-leach projects, plant selection, approvals
+            coordination and practical project delivery.
+          </p>
+          <p>
+            At VAA Resources, Peter leads project development, processing strategy and
+            operational delivery for the Holleton Gold Project. He is also evaluating
+            alternative non-chemical mineral-processing approaches for previously
+            treated gold-bearing material.
+          </p>
+
+          <div class="leadership-stats" aria-label="Peter Sworder experience highlights">
+            <div class="leadership-stat">
+              <strong>Since 1984</strong>
+              <span>WA gold-processing experience</span>
+            </div>
+            <div class="leadership-stat">
+              <strong>≈1.05 Mt</strong>
+              <span>Historic material treatment experience</span>
+            </div>
+            <div class="leadership-stat">
+              <strong>Mechanical Engineer</strong>
+              <span>Former airline captain</span>
+            </div>
+          </div>
+
+          <p class="leadership-note">
+            Historic treatment figures describe prior project experience and are not
+            current Mineral Resources or Ore Reserves of VAA Resources.
+          </p>
+        </div>
       </div>
     </div>
   </section>

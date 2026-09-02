@@ -12,7 +12,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#20272c">
+  <meta name="theme-color" content="#171a17">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="VAA Resources Pty Ltd">
 
@@ -30,16 +30,17 @@
   <meta property="og:title" content="VAA Resources | Western Australian Gold Reprocessing">
   <meta property="og:description" content="Recovering value from previously mined and historically treated gold-bearing material in Western Australia.">
   <meta property="og:url" content="https://www.vaaresources.com/">
-  <meta property="og:image" content="https://www.vaaresources.com/images/holleton-3d-hero.webp">
-  <meta property="og:image:alt" content="Three-dimensional survey of the Holleton Gold Project in Western Australia">
+  <meta property="og:image" content="https://www.vaaresources.com/images/holleton-aerial-hero.webp">
+  <meta property="og:image:alt" content="Aerial view of the Holleton Gold Project in Western Australia">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="VAA Resources | Western Australian Gold Reprocessing">
   <meta name="twitter:description" content="A Western Australian gold reprocessing company focused on previously mined and historically treated gold-bearing material.">
-  <meta name="twitter:image" content="https://www.vaaresources.com/images/holleton-3d-hero.webp">
+  <meta name="twitter:image" content="https://www.vaaresources.com/images/holleton-aerial-hero.webp">
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate icon" type="image/jpeg" href="/images/vaa-resources-logo.jpg">
+  <link rel="preload" as="image" href="/images/holleton-aerial-hero.webp" fetchpriority="high">
 
   <script type="application/ld+json">
   {
@@ -120,429 +121,436 @@
 
   <style>
     :root {
-      --charcoal: #20272c;
-      --charcoal-2: #2b343a;
-      --gold: #b98511;
-      --gold-light: #d2aa37;
-      --red: #a82920;
-      --green: #377c48;
-      --text: #24292d;
-      --muted: #69737a;
-      --line: #dde2e5;
-      --soft: #f4f6f7;
-      --white: #ffffff;
-      --max: 1180px;
+      --ink: #171a17;
+      --forest: #344238;
+      --clay: #91583d;
+      --ochre: #c3a05e;
+      --sand: #dfcfb4;
+      --paper: #f1ede4;
+      --paper-deep: #e9e1d2;
+      --white: #fbfaf6;
+      --text: #292b27;
+      --muted: #686c64;
+      --line: rgba(23, 26, 23, 0.2);
+      --max: 1240px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
-      background: var(--soft);
-      line-height: 1.6;
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
+    img { display: block; max-width: 100%; }
+    figure { margin: 0; }
+    a { color: inherit; }
+    section[id] { scroll-margin-top: 92px; }
 
-    a {
-      color: inherit;
-    }
-
-    section[id] {
-      scroll-margin-top: 105px;
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
     }
 
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255, 255, 255, 0.97);
+      background: rgba(241, 237, 228, 0.96);
       border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
     }
 
     .nav-wrap {
       max-width: var(--max);
+      min-height: 76px;
       margin: 0 auto;
-      min-height: 82px;
-      padding: 12px 24px;
+      padding: 10px 28px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 28px;
+      gap: 32px;
     }
 
-    .brand-logo {
-      width: 210px;
-      height: auto;
-    }
+    .brand-logo { width: 188px; height: auto; mix-blend-mode: multiply; }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 26px;
-      flex-wrap: wrap;
+      gap: 25px;
     }
 
     nav a {
+      color: var(--ink);
       text-decoration: none;
-      color: var(--charcoal);
-      font-size: 14px;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-
-    nav a:hover,
-    nav a:focus-visible {
-      color: var(--gold);
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #20272c 0%, #2f393f 100%);
-      color: var(--white);
-      padding: 76px 24px;
-    }
-
-    .hero-grid {
-      max-width: var(--max);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 0.95fr 1.25fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      margin: 0 0 12px;
-      color: var(--gold-light);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
     }
 
+    nav a:hover,
+    nav a:focus-visible { color: var(--clay); }
+
+    .hero {
+      position: relative;
+      min-height: min(880px, calc(100svh - 76px));
+      padding: 0;
+      overflow: hidden;
+      color: var(--white);
+      background: var(--ink);
+      border: 0;
+    }
+
+    .hero-media,
+    .hero-media::after {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 56%;
+    }
+
+    .hero-media::after {
+      content: "";
+      background:
+        linear-gradient(90deg, rgba(19, 21, 18, 0.9) 0%, rgba(19, 21, 18, 0.65) 38%, rgba(19, 21, 18, 0.12) 72%),
+        linear-gradient(0deg, rgba(19, 21, 18, 0.82) 0%, transparent 43%);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max);
+      min-height: inherit;
+      margin: 0 auto;
+      padding: 104px 28px 150px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-copy { width: 100%; min-width: 0; max-width: 850px; }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--clay);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    .hero .eyebrow { color: #e2bf7e; }
+
     .hero h1 {
+      max-width: 850px;
       margin: 0;
-      max-width: 720px;
-      font-size: clamp(40px, 6vw, 66px);
-      line-height: 1.02;
-      letter-spacing: -0.035em;
+      font-size: clamp(54px, 8vw, 104px);
+      line-height: 0.93;
+      letter-spacing: -0.045em;
+      text-wrap: balance;
     }
 
     .hero p {
-      margin: 22px 0 0;
-      max-width: 700px;
-      color: #d9dfe2;
-      font-size: 19px;
-      line-height: 1.7;
+      max-width: 680px;
+      margin: 25px 0 0;
+      color: rgba(251, 250, 246, 0.88);
+      font-size: clamp(17px, 1.7vw, 21px);
+      line-height: 1.65;
     }
 
-    .hero-facts {
-      margin-top: 24px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .hero-facts span {
-      padding: 7px 11px;
-      border: 1px solid rgba(210, 170, 55, 0.55);
-      border-radius: 999px;
-      color: #f3e2aa;
-      background: rgba(255, 255, 255, 0.04);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .hero-button {
+    .text-link {
       display: inline-block;
-      margin-top: 28px;
-      padding: 14px 20px;
-      border-radius: 7px;
-      background: var(--gold-light);
-      color: var(--charcoal);
+      margin-top: 30px;
+      padding: 0 0 7px;
+      border-bottom: 1px solid var(--ochre);
+      color: var(--white);
       text-decoration: none;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-    }
-
-    .hero-button:hover,
-    .hero-button:focus-visible {
-      background: #e0bd57;
-    }
-
-    .hero-image {
-      background: var(--white);
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 24px 70px rgba(0,0,0,0.28);
-    }
-
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-caption {
-      padding: 10px 14px 12px;
-      color: #727b80;
-      background: var(--white);
       font-size: 11px;
-    }
-
-    section {
-      padding: 82px 24px;
-      background: var(--white);
-      border-bottom: 1px solid var(--line);
-    }
-
-    section.alt {
-      background: var(--soft);
-    }
-
-    .content {
-      max-width: var(--max);
-      margin: 0 auto;
-    }
-
-    .section-head {
-      max-width: 850px;
-      margin-bottom: 34px;
-    }
-
-    h2 {
-      margin: 0;
-      font-size: clamp(30px, 4vw, 42px);
-      line-height: 1.15;
-      color: var(--charcoal);
-      letter-spacing: -0.02em;
-    }
-
-    .lead {
-      margin: 14px 0 0;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.75;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .about-copy p {
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .about-image {
-      overflow: hidden;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: #fff;
-    }
-
-    .about-image img {
-      width: 100%;
-    }
-
-    .image-caption {
-      padding: 11px 14px 13px;
-      color: #7a8388;
-      background: #fff;
-      font-size: 11px;
-      border-top: 1px solid #eef1f2;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-top: 34px;
-    }
-
-    .card {
-      overflow: hidden;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(33, 41, 46, 0.05);
-    }
-
-    .card-image {
-      height: 220px;
-      overflow: hidden;
-      background: #e8ebed;
-    }
-
-    .card-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .card-body {
-      padding: 24px;
-    }
-
-    .card h3 {
-      margin: 0 0 8px;
-      color: var(--charcoal);
-      font-size: 20px;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .focus-note {
-      margin-top: 26px;
-      padding: 22px 24px;
-      border: 1px solid #e2cf9c;
-      border-left: 5px solid var(--gold-light);
-      border-radius: 10px;
-      background: var(--white);
-    }
-
-    .focus-note strong {
-      display: block;
-      color: var(--charcoal);
-      font-size: 18px;
-    }
-
-    .focus-note p {
-      margin: 6px 0 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .evaluation-box {
-      margin-top: 26px;
-      padding: 28px;
-      display: grid;
-      grid-template-columns: 0.42fr 1fr;
-      gap: 30px;
-      align-items: start;
-      border: 1px solid #e2cf9c;
-      border-left: 5px solid var(--gold-light);
-      border-radius: 12px;
-      background: #fffaf0;
-    }
-
-    .evaluation-box h3 {
-      margin: 0;
-      color: var(--charcoal);
-      font-size: 23px;
-      line-height: 1.25;
-    }
-
-    .evaluation-box p {
-      margin: 0;
-      color: #5e6265;
-      font-size: 16px;
-      line-height: 1.75;
-    }
-
-    .status-strip {
-      margin: 34px 0 0;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      overflow: hidden;
-      background: var(--soft);
-    }
-
-    .status-item {
-      padding: 18px 20px;
-      border-right: 1px solid var(--line);
-    }
-
-    .status-item:last-child {
-      border-right: 0;
-    }
-
-    .status-item span {
-      display: block;
-      color: var(--gold);
-      font-size: 10px;
       font-weight: 800;
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
-    .status-item strong {
-      display: block;
-      margin-top: 3px;
-      color: var(--charcoal);
-      font-size: 14px;
+    .text-link:hover,
+    .text-link:focus-visible { color: #e2bf7e; }
+
+    .hero-meta {
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      bottom: 0;
+      width: min(calc(100% - 56px), var(--max));
+      transform: translateX(-50%);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(255,255,255,0.42);
     }
 
-    .project-facts {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .project-fact {
-      padding: 7px 11px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--soft);
-      color: #566168;
-      font-size: 12px;
+    .hero-meta span {
+      padding: 18px 0 20px;
+      color: rgba(255,255,255,0.78);
+      font-size: 10px;
       font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero-meta span + span {
+      padding-left: 24px;
+      border-left: 1px solid rgba(255,255,255,0.24);
+    }
+
+    section {
+      padding: 108px 28px;
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+
+    section.alt { background: var(--paper); }
+    .content { max-width: var(--max); margin: 0 auto; }
+
+    h2 {
+      max-width: 920px;
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(38px, 5.2vw, 68px);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+      text-wrap: balance;
+    }
+
+    .lead {
+      max-width: 800px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.78;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 64px;
+      align-items: end;
+      margin-bottom: 62px;
+    }
+
+    .section-head .lead { margin-top: 0; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 92px;
+      align-items: start;
+    }
+
+    .about-copy p:not(.eyebrow) {
+      max-width: 690px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .company-definition {
+      border-top: 1px solid var(--ink);
+    }
+
+    .definition-row {
+      padding: 23px 0 25px;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 26px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .definition-row span,
+    .project-register span,
+    figcaption {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .definition-row strong {
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .process-sequence { border-bottom: 1px solid var(--ink); }
+
+    .process-step {
+      padding: 32px 0;
+      display: grid;
+      grid-template-columns: 70px minmax(260px, 0.8fr) minmax(360px, 1.2fr);
+      gap: 36px;
+      align-items: center;
+      border-top: 1px solid var(--ink);
+    }
+
+    .process-index {
+      align-self: start;
+      color: var(--clay);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 31px;
+    }
+
+    .process-copy h3 {
+      margin: 0 0 11px;
+      color: var(--ink);
+      font-size: 30px;
+      line-height: 1.12;
+    }
+
+    .process-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .process-figure img {
+      width: 100%;
+      aspect-ratio: 16 / 8;
+      object-fit: cover;
+    }
+
+    figcaption {
+      padding-top: 9px;
+      line-height: 1.45;
+    }
+
+    .focus-note {
+      margin-top: 62px;
+      padding: 38px 42px;
+      display: grid;
+      grid-template-columns: 0.6fr 1.4fr;
+      gap: 52px;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .focus-note strong {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 31px;
+      font-weight: 500;
+      line-height: 1.15;
+    }
+
+    .focus-note p {
+      margin: 0;
+      color: rgba(255,255,255,0.74);
+    }
+
+    .evaluation-box {
+      margin-top: 46px;
+      padding: 34px 0;
+      display: grid;
+      grid-template-columns: 0.65fr 1.35fr;
+      gap: 64px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .evaluation-box h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 29px;
+      line-height: 1.15;
+    }
+
+    .evaluation-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .project-banner {
+      position: relative;
+      margin-bottom: 72px;
+    }
+
+    .project-banner img {
+      width: 100%;
+      height: min(58vw, 610px);
+      min-height: 420px;
+      object-fit: cover;
+      object-position: center 46%;
+    }
+
+    .project-banner figcaption {
+      position: absolute;
+      right: 18px;
+      bottom: 16px;
+      padding: 8px 10px;
+      color: rgba(255,255,255,0.84);
+      background: rgba(23,26,23,0.7);
+    }
+
+    .project-register {
+      margin: 0 0 56px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .project-register div { padding: 19px 20px 22px 0; }
+    .project-register div + div { padding-left: 20px; border-left: 1px solid var(--line); }
+
+    .project-register strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--ink);
+      font-size: 14px;
+      line-height: 1.45;
     }
 
     .project-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 26px;
-      margin-top: 38px;
+      grid-template-columns: 1.45fr 0.75fr;
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      gap: 24px;
     }
 
+    .project-panel:first-child { grid-row: 1 / 3; }
+
     .project-panel {
-      overflow: hidden;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
     }
 
     .project-panel img {
       width: 100%;
-      height: 100%;
-      min-height: 340px;
+      height: 275px;
       object-fit: cover;
     }
 
-    .project-panel.map img {
-      object-fit: contain;
-      background: #16242f;
-    }
+    .project-panel:first-child img { height: 630px; }
+    .project-panel.map img { object-fit: contain; background: #16242f; }
+    .project-panel figcaption { flex: 0 0 auto; padding: 10px 0 0; }
 
     .project-copy {
-      margin-top: 34px;
+      margin-top: 50px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 30px;
+      gap: 68px;
     }
 
     .project-copy p {
@@ -553,83 +561,71 @@
 
     .leadership-grid {
       display: grid;
-      grid-template-columns: 0.48fr 1.12fr;
-      gap: 46px;
-      align-items: center;
+      grid-template-columns: 0.42fr 1.08fr;
+      gap: 80px;
+      align-items: start;
     }
 
     .leadership-photo {
-      max-width: 360px;
-      overflow: hidden;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: var(--charcoal);
-      box-shadow: 0 12px 32px rgba(33, 41, 46, 0.09);
+      max-width: 380px;
+      border-bottom: 5px solid var(--clay);
+      background: var(--ink);
     }
 
-    .leadership-photo img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-    }
+    .leadership-photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
 
     .leadership-role {
-      margin: 4px 0 20px;
-      color: var(--gold);
-      font-size: 14px;
+      margin: 6px 0 24px;
+      color: var(--clay);
+      font-size: 11px;
       font-weight: 800;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
     .leadership-copy > p:not(.eyebrow):not(.leadership-role) {
-      margin: 0 0 16px;
+      max-width: 780px;
+      margin: 0 0 17px;
       color: var(--muted);
       font-size: 16px;
-      line-height: 1.75;
     }
 
     .leadership-stats {
-      margin-top: 24px;
+      margin-top: 30px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
     }
 
-    .leadership-stat {
-      padding: 17px 18px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: var(--white);
-    }
+    .leadership-stat { padding: 20px 18px 22px 0; }
+    .leadership-stat + .leadership-stat { padding-left: 18px; border-left: 1px solid var(--line); }
 
     .leadership-stat strong {
       display: block;
-      color: var(--charcoal);
-      font-size: 19px;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      font-weight: 500;
       line-height: 1.2;
     }
 
     .leadership-stat span {
       display: block;
-      margin-top: 5px;
+      margin-top: 7px;
       color: var(--muted);
-      font-size: 11px;
-      line-height: 1.4;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      line-height: 1.45;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
 
-    .leadership-note {
-      margin-top: 14px !important;
-      font-size: 11px !important;
-      color: #7f888d !important;
-    }
+    .leadership-note { margin-top: 14px !important; color: #83867e !important; font-size: 11px !important; }
 
     .investor-section {
-      background: linear-gradient(135deg, #20272c 0%, #303b41 100%);
-      color: white;
-      border-bottom: 0;
+      color: var(--white);
+      background: var(--ink);
+      border: 0;
     }
 
     .investor-grid {
@@ -637,237 +633,208 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 50px;
-      align-items: center;
+      gap: 72px;
+      align-items: end;
     }
 
-    .investor-section h2 {
-      color: white;
-      max-width: 800px;
-    }
-
-    .investor-copy {
-      max-width: 850px;
-    }
+    .investor-section .eyebrow { color: #e2bf7e; }
+    .investor-section h2 { max-width: 850px; color: var(--white); }
+    .investor-copy { max-width: 900px; }
 
     .investor-text {
-      margin: 18px 0 0;
       max-width: 800px;
-      color: #d8dee1;
-      font-size: 17px;
-      line-height: 1.75;
+      margin: 19px 0 0;
+      color: rgba(255,255,255,0.72);
+      font-size: 16px;
     }
 
     .investor-button {
       display: inline-block;
-      min-width: 220px;
-      padding: 16px 24px;
-      border: 1px solid var(--gold-light);
-      border-radius: 7px;
-      color: var(--gold-light);
+      padding: 0 0 8px;
+      border-bottom: 1px solid var(--ochre);
+      color: var(--white);
       text-decoration: none;
-      text-align: center;
-      font-size: 12px;
+      white-space: nowrap;
+      font-size: 11px;
       font-weight: 800;
-      letter-spacing: 0.08em;
-      transition: background 0.2s ease, color 0.2s ease;
+      letter-spacing: 0.12em;
     }
 
     .investor-button:hover,
-    .investor-button:focus-visible {
-      background: var(--gold-light);
-      color: var(--charcoal);
-    }
+    .investor-button:focus-visible { color: #e2bf7e; }
 
     .investor-disclaimer {
       max-width: var(--max);
-      margin: 34px auto 0;
-      padding-top: 22px;
-      border-top: 1px solid rgba(255,255,255,0.13);
-      color: #a8b2b7;
+      margin: 46px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.18);
+      color: rgba(255,255,255,0.48);
       font-size: 10px;
-      line-height: 1.65;
     }
 
+    .safety-section { color: var(--white); background: var(--forest); }
+
     .safety-box {
-      background: var(--charcoal);
-      color: white;
-      padding: 38px;
-      border-radius: 14px;
       display: grid;
-      grid-template-columns: 0.75fr 1.25fr;
-      gap: 42px;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 90px;
       align-items: start;
     }
 
-    .safety-box h2 {
-      color: white;
-    }
-
-    .safety-box p {
-      margin: 0 0 14px;
-      color: #d7dde0;
-    }
+    .safety-box .eyebrow { color: #e2bf7e; }
+    .safety-box h2 { color: var(--white); }
+    .safety-box p { margin: 0 0 17px; color: rgba(255,255,255,0.72); font-size: 16px; }
 
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 0.85fr;
-      gap: 36px;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 90px;
       align-items: start;
     }
 
-    .contact-card {
-      background: var(--soft);
-      border: 1px solid var(--line);
-      padding: 28px;
-      border-radius: 12px;
+    .contact-details {
+      margin-top: 36px;
+      border-top: 1px solid var(--ink);
     }
 
-    .contact-card p {
-      margin: 7px 0;
+    .contact-details p {
+      margin: 0;
+      padding: 13px 0;
+      display: grid;
+      grid-template-columns: 165px 1fr;
+      border-bottom: 1px solid var(--line);
       color: var(--muted);
     }
 
-    .contact-card a {
-      color: var(--gold);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .contact-logo {
-      max-width: 360px;
-      margin: 0 auto;
-    }
+    .contact-details a { color: var(--clay); font-weight: 700; text-decoration: none; }
+    .contact-logo { max-width: 350px; margin: 20px auto 0; mix-blend-mode: multiply; }
 
     footer {
-      background: #171c1f;
-      color: #aeb7bc;
-      padding: 36px 24px;
-      text-align: center;
-      font-size: 13px;
+      padding: 42px 28px;
+      color: rgba(255,255,255,0.58);
+      background: #111310;
+      font-size: 12px;
     }
 
-    footer strong {
-      color: white;
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
     }
 
-    footer a {
-      color: #cbd2d6;
-      text-decoration: none;
-    }
+    footer strong { color: var(--white); }
+    footer a { color: rgba(255,255,255,0.74); text-decoration: none; }
+    footer a:hover, footer a:focus-visible { color: #e2bf7e; }
 
-    footer a:hover,
-    footer a:focus-visible {
-      color: var(--gold-light);
-    }
+    @media (max-width: 980px) {
+      nav { gap: 16px; }
 
-    .gold-line {
-      width: 60px;
-      height: 3px;
-      margin: 18px 0 0;
-      background: var(--gold-light);
-      border-radius: 2px;
-    }
-
-    @media (max-width: 900px) {
-      .hero-grid,
+      .section-head,
       .about-grid,
+      .focus-note,
       .evaluation-box,
-      .project-grid,
       .project-copy,
       .leadership-grid,
+      .investor-grid,
       .safety-box,
-      .contact-grid,
-      .investor-grid {
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      .leadership-photo {
-        max-width: 300px;
-      }
+      .section-head,
+      .about-grid,
+      .leadership-grid,
+      .safety-box,
+      .contact-grid { gap: 46px; }
 
-      .status-strip {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .status-item:nth-child(2) {
-        border-right: 0;
-      }
-
-      .status-item:nth-child(-n+2) {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .card-image {
-        height: 280px;
-      }
-
-      .hero {
-        padding-top: 58px;
-      }
+      .process-step { grid-template-columns: 52px 0.8fr 1.2fr; gap: 24px; }
+      .project-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; }
+      .project-panel:first-child { grid-column: 1 / 3; grid-row: auto; }
+      .project-panel:first-child img { height: 520px; }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 760px) {
+      section[id] { scroll-margin-top: 122px; }
+
       .nav-wrap {
-        align-items: flex-start;
+        min-height: 0;
+        padding: 9px 18px 11px;
         flex-direction: column;
-        gap: 8px;
+        align-items: flex-start;
+        gap: 7px;
       }
 
-      .brand-logo {
-        width: 180px;
-      }
+      .brand-logo { width: 160px; }
 
       nav {
-        gap: 15px 18px;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        padding-bottom: 2px;
+        gap: 16px;
+        overflow-x: auto;
+        scrollbar-width: none;
       }
 
-      nav a {
-        font-size: 12px;
+      nav::-webkit-scrollbar { display: none; }
+      nav a { flex: 0 0 auto; font-size: 9px; }
+
+      .hero { min-height: 730px; }
+
+      .hero-grid { padding: 76px 20px 156px; }
+
+      .hero-copy { width: calc(100vw - 40px); max-width: calc(100vw - 40px); }
+      .hero p { width: 100%; max-width: 100%; }
+
+      .hero-media::after {
+        background:
+          linear-gradient(90deg, rgba(19,21,18,0.78), rgba(19,21,18,0.22)),
+          linear-gradient(0deg, rgba(19,21,18,0.94) 0%, rgba(19,21,18,0.28) 68%);
       }
 
-      .hero {
-        padding: 52px 18px;
-      }
+      .hero h1 { max-width: 100%; font-size: clamp(46px, 12.5vw, 56px); }
 
-      section {
-        padding: 62px 18px;
-      }
-
-      .card-image {
-        height: 220px;
-      }
-
-      .project-panel img {
-        min-height: 240px;
-      }
-
-      .evaluation-box,
-      .safety-box {
-        padding: 26px;
-      }
-
-      .leadership-stats {
+      .hero-meta {
+        width: calc(100% - 40px);
         grid-template-columns: 1fr;
       }
 
-      .status-strip {
-        grid-template-columns: 1fr;
+      .hero-meta span { padding: 8px 0; }
+      .hero-meta span + span { padding-left: 0; border: 0; }
+
+      section { padding: 76px 20px; }
+      .section-head { margin-bottom: 42px; }
+
+      .definition-row { grid-template-columns: 105px 1fr; gap: 18px; }
+
+      .process-step {
+        padding: 27px 0;
+        grid-template-columns: 42px 1fr;
       }
 
-      .status-item,
-      .status-item:nth-child(2) {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
+      .process-figure { grid-column: 1 / 3; }
+      .focus-note { padding: 30px 26px; gap: 20px; }
+      .evaluation-box { gap: 22px; }
 
-      .status-item:last-child {
-        border-bottom: 0;
-      }
+      .project-banner { margin-bottom: 48px; }
+      .project-banner img { min-height: 330px; }
+      .project-register { grid-template-columns: 1fr 1fr; }
+      .project-register div:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
+      .project-register div:nth-child(4) { border-top: 1px solid var(--line); }
+      .project-grid { grid-template-columns: 1fr; }
+      .project-panel:first-child { grid-column: auto; }
+      .project-panel:first-child img { height: 380px; }
+
+      .leadership-stats { grid-template-columns: 1fr; }
+      .leadership-stat + .leadership-stat { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+      .contact-details p { grid-template-columns: 1fr; gap: 2px; }
+      .footer-inner { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
     }
   </style>
 </head>
@@ -893,32 +860,32 @@
 
 <main id="top">
   <section class="hero">
+    <figure class="hero-media" aria-hidden="true">
+      <img
+        src="/images/holleton-aerial-hero.webp"
+        alt=""
+        fetchpriority="high"
+        decoding="async"
+      >
+    </figure>
+
     <div class="hero-grid">
-      <div>
-        <p class="eyebrow">Western Australian Gold Reprocessing Company</p>
-        <h1>Gold Reprocessing for Previously Mined Material</h1>
+      <div class="hero-copy">
+        <p class="eyebrow">VAA Resources / Western Australia</p>
+        <h1>Gold reprocessing in Western Australia</h1>
         <p>
           VAA Resources Pty Ltd recovers value from previously mined and historically
           treated gold-bearing material. We assess, prepare and reprocess material through
           purpose-selected processing pathways and responsible site operations.
         </p>
-        <div class="hero-facts" aria-label="VAA Resources focus">
-          <span>Reprocessing previously mined material</span>
-          <span>Historically treated material</span>
-          <span>Western Australian projects</span>
-        </div>
-        <a class="hero-button" href="#contact">DISCUSS GOLD-BEARING MATERIAL →</a>
+        <a class="text-link" href="#reprocessing">See how VAA reprocesses material →</a>
       </div>
+    </div>
 
-      <div class="hero-image">
-        <img
-          src="/images/holleton-3d-hero.webp"
-          alt="Three-dimensional survey of the Holleton Gold Project in Western Australia"
-          fetchpriority="high"
-          decoding="async"
-        >
-        <div class="hero-caption">Holleton Gold Project — three-dimensional site survey view</div>
-      </div>
+    <div class="hero-meta" aria-label="Holleton project context">
+      <span>Holleton Gold Project</span>
+      <span>M77/643 &amp; M77/898</span>
+      <span>Aerial field survey / April 2026</span>
     </div>
   </section>
 
@@ -926,7 +893,7 @@
     <div class="content">
       <div class="about-grid">
         <div class="about-copy">
-          <p class="eyebrow">About VAA Resources</p>
+          <p class="eyebrow">01 / About VAA Resources</p>
           <h2>Integrated capability built around gold recovery</h2>
           <p>
             VAA Resources Pty Ltd is a Western Australian gold reprocessing company.
@@ -940,15 +907,20 @@
           </p>
         </div>
 
-        <div class="about-image">
-          <img
-            src="/images/holleton-3d-secondary.webp"
-            alt="Terrain model of the Holleton Gold Project and historical mining disturbance"
-            loading="lazy"
-            decoding="async"
-          >
-          <div class="image-caption">Holleton survey supporting processing and site planning</div>
-        </div>
+        <aside class="company-definition" aria-label="VAA Resources company focus">
+          <div class="definition-row">
+            <span>What we do</span>
+            <strong>Reprocess previously mined and historically treated gold-bearing material.</strong>
+          </div>
+          <div class="definition-row">
+            <span>How we work</span>
+            <strong>Assess material, select a suitable pathway and prepare operations for recovery.</strong>
+          </div>
+          <div class="definition-row">
+            <span>What we are not</span>
+            <strong>VAA is not an equipment-hire or general contract-crushing business.</strong>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
@@ -956,8 +928,10 @@
   <section id="reprocessing" class="alt">
     <div class="content">
       <div class="section-head">
-        <p class="eyebrow">How Gold Reprocessing Works</p>
-        <h2>An integrated pathway from gold-bearing material to recovery</h2>
+        <div>
+          <p class="eyebrow">02 / Gold Reprocessing</p>
+          <h2>From previously mined material to recovery</h2>
+        </div>
         <p class="lead">
           VAA brings together material assessment, controlled preparation, processing
           evaluation and site delivery to establish practical gold-recovery pathways
@@ -965,59 +939,65 @@
         </p>
       </div>
 
-      <div class="cards">
-        <article class="card">
-          <div class="card-image">
+      <div class="process-sequence">
+        <article class="process-step">
+          <div class="process-index">01</div>
+          <div class="process-copy">
+            <h3>Material assessment &amp; preparation</h3>
+            <p>
+              Gold-bearing material is assessed, sampled, classified and prepared to
+              determine a suitable reprocessing pathway.
+            </p>
+          </div>
+          <figure class="process-figure">
             <img
               src="/images/screening-plant.webp"
               alt="Screening plant used to prepare gold-bearing material for reprocessing"
               loading="lazy"
               decoding="async"
             >
-          </div>
-          <div class="card-body">
-            <h3>Material Assessment &amp; Preparation</h3>
-            <p>
-              Gold-bearing material is assessed, sampled, classified and prepared to
-              determine a suitable reprocessing pathway.
-            </p>
-          </div>
+            <figcaption>Material preparation plant / operational equipment</figcaption>
+          </figure>
         </article>
 
-        <article class="card">
-          <div class="card-image">
+        <article class="process-step">
+          <div class="process-index">02</div>
+          <div class="process-copy">
+            <h3>Controlled materials handling</h3>
+            <p>
+              Stockpiles and feed material are managed to support traceability,
+              consistent preparation and efficient processing.
+            </p>
+          </div>
+          <figure class="process-figure">
             <img
               src="/images/wheel-loader.webp"
               alt="Wheel loader managing gold-bearing material within a reprocessing project"
               loading="lazy"
               decoding="async"
             >
-          </div>
-          <div class="card-body">
-            <h3>Controlled Materials Handling</h3>
-            <p>
-              Stockpiles and feed material are managed to support traceability,
-              consistent preparation and efficient processing.
-            </p>
-          </div>
+            <figcaption>Materials handling / feed management</figcaption>
+          </figure>
         </article>
 
-        <article class="card">
-          <div class="card-image">
+        <article class="process-step">
+          <div class="process-index">03</div>
+          <div class="process-copy">
+            <h3>Sizing for gold recovery</h3>
+            <p>
+              Crushing and screening are used where required to prepare material for
+              downstream gold-recovery processes as part of VAA's reprocessing work.
+            </p>
+          </div>
+          <figure class="process-figure">
             <img
               src="/images/mobile-crusher.webp"
               alt="Mobile crusher preparing gold-bearing material for downstream recovery"
               loading="lazy"
               decoding="async"
             >
-          </div>
-          <div class="card-body">
-            <h3>Sizing for Gold Recovery</h3>
-            <p>
-              Crushing and screening are used where required to prepare material for
-              downstream gold-recovery processes as part of VAA's reprocessing work.
-            </p>
-          </div>
+            <figcaption>Material sizing / downstream preparation</figcaption>
+          </figure>
         </article>
       </div>
 
@@ -1047,60 +1027,75 @@
 
   <section id="holleton">
     <div class="content">
+      <figure class="project-banner">
+        <img
+          src="/images/holleton-aerial-landscape.webp"
+          alt="Aerial survey view across the Holleton Gold Project landscape"
+          loading="lazy"
+          decoding="async"
+        >
+        <figcaption>Holleton / aerial field survey / April 2026</figcaption>
+      </figure>
+
       <div class="section-head">
-        <p class="eyebrow">Holleton Gold Project</p>
-        <h2>Holleton: a focused gold reprocessing project</h2>
+        <div>
+          <p class="eyebrow">03 / Holleton Gold Project</p>
+          <h2>A focused gold reprocessing project</h2>
+        </div>
         <p class="lead">
           At Holleton, VAA is advancing the assessment and reprocessing of previously
           mined and historically treated gold-bearing lateritic material within an
           established mining area.
         </p>
-
-        <div class="project-facts" aria-label="Holleton project facts">
-          <span class="project-fact">Western Australia</span>
-          <span class="project-fact">Reprocessing project</span>
-          <span class="project-fact">Previously mined and treated material</span>
-          <span class="project-fact">Historically disturbed mining area</span>
-          <span class="project-fact">M77/643 &amp; M77/898</span>
-        </div>
       </div>
 
-      <div class="status-strip" aria-label="Project development status">
-        <div class="status-item">
-          <span>Project</span>
-          <strong>Evaluation &amp; Development</strong>
+      <div class="project-register" aria-label="Holleton project register">
+        <div>
+          <span>Location</span>
+          <strong>Western Australia</strong>
         </div>
-        <div class="status-item">
-          <span>Approvals</span>
-          <strong>Planning &amp; Progression</strong>
+        <div>
+          <span>Tenements</span>
+          <strong>M77/643 &amp; M77/898</strong>
         </div>
-        <div class="status-item">
-          <span>Plant</span>
-          <strong>Preparation</strong>
+        <div>
+          <span>Material</span>
+          <strong>Previously mined and historically treated</strong>
         </div>
-        <div class="status-item">
-          <span>Field</span>
-          <strong>Survey &amp; Investigation</strong>
+        <div>
+          <span>Project stage</span>
+          <strong>Evaluation, planning and development</strong>
         </div>
       </div>
 
       <div class="project-grid">
-        <div class="project-panel">
+        <figure class="project-panel">
+          <img
+            src="/images/holleton-aerial-plan.webp"
+            alt="Vertical aerial survey of the Holleton Gold Project showing historic workings and surrounding terrain"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Historic workings and surrounding terrain / vertical aerial survey</figcaption>
+        </figure>
+        <figure class="project-panel">
           <img
             src="/images/holleton-drilling.webp"
             alt="Field investigation at the Holleton Gold Project in Western Australia"
             loading="lazy"
             decoding="async"
           >
-        </div>
-        <div class="project-panel map">
+          <figcaption>Field investigation / Holleton Gold Project</figcaption>
+        </figure>
+        <figure class="project-panel map">
           <img
             src="/images/holleton-tenement.webp"
             alt="Aerial view of the Holleton Gold Project and mining tenements M77/643 and M77/898"
             loading="lazy"
             decoding="async"
           >
-        </div>
+          <figcaption>Tenement context / M77/643 and M77/898</figcaption>
+        </figure>
       </div>
 
       <div class="project-copy">
@@ -1132,7 +1127,7 @@
         </div>
 
         <div class="leadership-copy">
-          <p class="eyebrow">Leadership</p>
+          <p class="eyebrow">04 / Leadership</p>
           <h2>Peter Sworder</h2>
           <p class="leadership-role">Chief Executive Officer &amp; Director</p>
           <p>
@@ -1176,7 +1171,7 @@
   <section id="partnerships" class="investor-section">
     <div class="investor-grid">
       <div class="investor-copy">
-        <p class="eyebrow">Gold Reprocessing Partnerships</p>
+        <p class="eyebrow">05 / Gold Reprocessing Partnerships</p>
         <h2>Partnering around gold-bearing material and reprocessing opportunities</h2>
         <p class="investor-text">
           VAA Resources welcomes confidential discussions with holders of previously
@@ -1211,11 +1206,11 @@
     </div>
   </section>
 
-  <section id="safety" class="alt">
+  <section id="safety" class="safety-section">
     <div class="content">
       <div class="safety-box">
         <div>
-          <p class="eyebrow">Safety &amp; Compliance</p>
+          <p class="eyebrow">06 / Safety &amp; Compliance</p>
           <h2>Responsible systems for material reprocessing operations</h2>
         </div>
         <div>
@@ -1238,25 +1233,27 @@
     <div class="content">
       <div class="contact-grid">
         <div>
-          <p class="eyebrow">Gold Reprocessing &amp; Corporate Enquiries</p>
+          <p class="eyebrow">07 / Gold Reprocessing &amp; Corporate Enquiries</p>
           <h2>Discuss gold-bearing material with VAA</h2>
           <p class="lead">
             Contact VAA regarding previously mined or historically treated gold-bearing
             material, project partnerships or corporate matters.
           </p>
-          <div class="contact-card">
-            <p><strong>Western Australia</strong></p>
+          <div class="contact-details">
+            <p><strong>Location</strong><span>Western Australia</span></p>
             <p>
-              Corporate email:
-              <a
-                href="mailto:corporate@vaaresources.com?subject=Corporate%20Enquiry%20-%20VAA%20Resources"
-                onclick="gtag('event','corporate_email_click',{'event_category':'engagement','event_label':'contact'});"
-              >
-                corporate@vaaresources.com
-              </a>
+              <strong>Corporate email</strong>
+              <span>
+                <a
+                  href="mailto:corporate@vaaresources.com?subject=Corporate%20Enquiry%20-%20VAA%20Resources"
+                  onclick="gtag('event','corporate_email_click',{'event_category':'engagement','event_label':'contact'});"
+                >
+                  corporate@vaaresources.com
+                </a>
+              </span>
             </p>
-            <p>ABN: 17 698 155 912</p>
-            <p>ACN: 698 155 912</p>
+            <p><strong>ABN</strong><span>17 698 155 912</span></p>
+            <p><strong>ACN</strong><span>698 155 912</span></p>
           </div>
         </div>
 
@@ -1275,11 +1272,17 @@
 </main>
 
 <footer>
-  <strong>VAA Resources Pty Ltd</strong><br>
-  Western Australian gold reprocessing<br>
-  ABN 17 698 155 912<br>
-  <a href="/privacy.html">Privacy</a><br><br>
-  © 2026 VAA Resources Pty Ltd. All rights reserved.
+  <div class="footer-inner">
+    <div>
+      <strong>VAA Resources Pty Ltd</strong><br>
+      Western Australian gold reprocessing<br>
+      ABN 17 698 155 912
+    </div>
+    <div>
+      <a href="/privacy.html">Privacy</a><br>
+      © 2026 VAA Resources Pty Ltd. All rights reserved.
+    </div>
+  </div>
 </footer>
 </body>
 </html>

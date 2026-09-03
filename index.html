@@ -620,6 +620,56 @@
       text-transform: uppercase;
     }
 
+    .company-update {
+      padding: 52px 28px;
+      background: #e8e0d2;
+      border-top: 1px solid #cfc3af;
+      border-bottom: 1px solid #cfc3af;
+    }
+
+    .update-grid {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr) auto;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .update-date {
+      color: var(--clay);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      line-height: 1.55;
+      text-transform: uppercase;
+    }
+
+    .update-copy h2 {
+      margin: 0;
+      font-size: clamp(27px, 3vw, 38px);
+    }
+
+    .update-copy p {
+      max-width: 780px;
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .update-link {
+      display: inline-block;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--clay);
+      color: var(--ink);
+      text-decoration: none;
+      white-space: nowrap;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    .update-link:hover,
+    .update-link:focus-visible { color: var(--clay); }
+
     .investor-section {
       color: var(--white);
       background: var(--ink);
@@ -735,6 +785,7 @@
       .evaluation-box,
       .project-copy,
       .leadership-grid,
+      .update-grid,
       .investor-grid,
       .safety-box,
       .contact-grid {
@@ -827,6 +878,7 @@
 
       .leadership-stats { grid-template-columns: 1fr; }
       .leadership-stat + .leadership-stat { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+      .company-update { padding: 44px 20px; }
       .contact-details p { grid-template-columns: 1fr; gap: 2px; }
       .footer-inner { flex-direction: column; }
     }
@@ -1159,6 +1211,30 @@
           </div>
 
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="company-update" class="company-update" aria-labelledby="company-update-title">
+    <div class="content">
+      <div class="update-grid">
+        <div class="update-date">Company update<br>13–14 October 2026</div>
+        <div class="update-copy">
+          <h2 id="company-update-title">VAA attending 121 Mining Investment Global Online</h2>
+          <p>
+            VAA Resources will participate in scheduled industry meetings, discussing
+            its Western Australian gold-reprocessing focus, project development and
+            potential commercial and technical partnerships.
+          </p>
+        </div>
+        <a
+          class="update-link"
+          href="https://121mininginvestment.com/home"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          EVENT INFORMATION →
+        </a>
       </div>
     </div>
   </section>

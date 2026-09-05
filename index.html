@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
+  <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-029JV4R2LW"></script>
   <script>
@@ -10,7 +11,6 @@
     gtag('config', 'G-029JV4R2LW');
   </script>
 
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#171a17">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -19,7 +19,7 @@
   <title>VAA Resources | Western Australian Gold Reprocessing</title>
   <meta
     name="description"
-    content="VAA Resources is a Western Australian gold reprocessing company assessing and developing pathways for previously mined and historically treated gold-bearing material."
+    content="Western Australian gold reprocessing company focused on previously mined and treated gold-bearing material. Explore Holleton and discuss a material or project enquiry."
   >
   <link rel="canonical" href="https://www.vaaresources.com/">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -28,15 +28,16 @@
   <meta property="og:locale" content="en_AU">
   <meta property="og:site_name" content="VAA Resources">
   <meta property="og:title" content="VAA Resources | Western Australian Gold Reprocessing">
-  <meta property="og:description" content="Assessing and developing gold reprocessing pathways for previously mined and historically treated material in Western Australia.">
+  <meta property="og:description" content="A Western Australian gold reprocessing company combining material assessment, processing studies and its own earthmoving capability. Explore the Holleton Gold Project.">
   <meta property="og:url" content="https://www.vaaresources.com/">
   <meta property="og:image" content="https://www.vaaresources.com/images/holleton-aerial-hero.webp">
   <meta property="og:image:alt" content="Aerial view of the Holleton Gold Project in Western Australia">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="VAA Resources | Western Australian Gold Reprocessing">
-  <meta name="twitter:description" content="A Western Australian company assessing and developing gold reprocessing pathways for previously mined and historically treated material.">
+  <meta name="twitter:description" content="A Western Australian gold reprocessing company combining material assessment, processing studies and its own earthmoving capability. Explore the Holleton Gold Project.">
   <meta name="twitter:image" content="https://www.vaaresources.com/images/holleton-aerial-hero.webp">
+  <meta name="twitter:image:alt" content="Aerial view of the Holleton Gold Project in Western Australia">
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate icon" type="image/jpeg" href="/images/vaa-resources-logo.jpg">
@@ -56,8 +57,14 @@
           "@type": "ImageObject",
           "url": "https://www.vaaresources.com/images/vaa-resources-logo.jpg"
         },
-        "description": "A Western Australian gold reprocessing company assessing and developing pathways for previously mined and historically treated gold-bearing material.",
+        "description": "A Western Australian gold reprocessing company focused on previously mined and historically treated gold-bearing material, combining material assessment, processing studies and its own earthmoving capability.",
         "email": "corporate@vaaresources.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Corporate and project enquiries",
+          "email": "corporate@vaaresources.com",
+          "availableLanguage": "English"
+        },
         "employee": {
           "@id": "https://www.vaaresources.com/#peter-sworder"
         },
@@ -136,7 +143,7 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 140px; }
 
     body {
       margin: 0;
@@ -151,7 +158,22 @@
     img { display: block; max-width: 100%; }
     figure { margin: 0; }
     a { color: inherit; }
-    section[id] { scroll-margin-top: 92px; }
+    :focus-visible { outline: 3px solid var(--clay); outline-offset: 5px; }
+    .hero :focus-visible,
+    .investor-section :focus-visible,
+    footer :focus-visible { outline-color: #e2bf7e; }
+
+    .skip-link {
+      position: fixed;
+      z-index: 200;
+      top: 10px;
+      left: 16px;
+      padding: 12px 18px;
+      color: var(--white);
+      background: var(--ink);
+      transform: translateY(-180%);
+    }
+    .skip-link:focus { transform: translateY(0); }
 
     h1,
     h2,
@@ -177,15 +199,16 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 32px;
+      gap: 24px;
     }
 
-    .brand-logo { width: 188px; height: auto; mix-blend-mode: multiply; }
+    .brand-logo { width: 144px; height: auto; mix-blend-mode: multiply; }
+    .brand-link { flex: 0 0 auto; }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 22px;
     }
 
     nav a {
@@ -195,10 +218,25 @@
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
+      padding: 12px 0;
     }
 
     nav a:hover,
     nav a:focus-visible { color: var(--clay); }
+
+    .header-contact {
+      flex: 0 0 auto;
+      min-height: 44px;
+      padding: 11px 17px;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .header-contact:hover { color: var(--white); background: var(--ink); }
 
     .hero {
       position: relative;
@@ -270,6 +308,23 @@
       font-size: clamp(17px, 1.7vw, 21px);
       line-height: 1.65;
     }
+
+    .hero .eyebrow { margin: 0 0 18px; font-size: 11px; }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px 28px; margin-top: 30px; }
+    .hero-actions .text-link { margin-top: 0; padding: 12px 0; }
+    .hero-button {
+      display: inline-block;
+      padding: 14px 20px;
+      background: var(--sand);
+      color: var(--ink);
+      border: 1px solid var(--sand);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .hero-button:hover { background: var(--white); border-color: var(--white); }
 
     .text-link {
       display: inline-block;
@@ -480,6 +535,19 @@
       color: var(--muted);
       font-size: 16px;
     }
+
+    .material-questions { margin-top: 54px; border-top: 1px solid var(--ink); }
+    .material-questions > h3 { margin: 26px 0 20px; font-size: 29px; line-height: 1.2; }
+    .material-questions details { border-bottom: 1px solid var(--line); }
+    .material-questions summary {
+      padding: 18px 8px 18px 0;
+      color: var(--ink);
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .material-questions summary::marker { color: var(--clay); }
+    .material-questions details p { max-width: 860px; margin: 0 0 22px; color: var(--muted); }
+    .material-questions a { color: var(--clay); text-underline-offset: 3px; }
 
     .project-banner {
       position: relative;
@@ -716,8 +784,8 @@
       margin: 46px auto 0;
       padding-top: 20px;
       border-top: 1px solid rgba(255,255,255,0.18);
-      color: rgba(255,255,255,0.48);
-      font-size: 10px;
+      color: rgba(255,255,255,0.74);
+      font-size: 13px;
     }
 
     .safety-section { color: var(--white); background: var(--forest); }
@@ -754,8 +822,11 @@
       color: var(--muted);
     }
 
-    .contact-details a { color: var(--clay); font-weight: 700; text-decoration: none; }
-    .contact-logo { max-width: 350px; margin: 20px auto 0; mix-blend-mode: multiply; }
+    .contact-details a { display: inline-block; padding: 9px 0; color: var(--clay); font-weight: 700; text-underline-offset: 4px; overflow-wrap: anywhere; }
+    .contact-guidance { margin: 24px 0 0; padding-left: 18px; border-left: 2px solid var(--ochre); color: var(--muted); }
+    .contact-action { display: inline-block; margin-top: 24px; padding: 14px 22px; background: var(--ink); color: var(--white); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-decoration: none; text-transform: uppercase; }
+    .contact-action:hover { background: var(--forest); }
+    .contact-logo { max-width: 350px; width: 100%; height: auto; margin: 20px auto 0; mix-blend-mode: multiply; }
 
     footer {
       padding: 42px 28px;
@@ -775,6 +846,15 @@
     footer strong { color: var(--white); }
     footer a { color: rgba(255,255,255,0.74); text-decoration: none; }
     footer a:hover, footer a:focus-visible { color: #e2bf7e; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 0 22px; margin-bottom: 10px; }
+    .footer-links a { display: inline-block; padding: 10px 0; }
+
+    @media (min-width: 761px) and (max-width: 1100px) {
+      html { scroll-padding-top: 182px; }
+      .nav-wrap { display: grid; grid-template-columns: 1fr auto; gap: 0 24px; }
+      nav { grid-row: 2; grid-column: 1 / -1; justify-content: center; flex-wrap: wrap; }
+      .header-contact { grid-column: 2; grid-row: 1; }
+    }
 
     @media (max-width: 980px) {
       nav { gap: 16px; }
@@ -805,30 +885,32 @@
     }
 
     @media (max-width: 760px) {
-      section[id] { scroll-margin-top: 122px; }
+      html { scroll-padding-top: 156px; }
 
       .nav-wrap {
         min-height: 0;
-        padding: 9px 18px 11px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 7px;
+        padding: 4px 18px 5px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0 16px;
       }
 
-      .brand-logo { width: 160px; }
+      .brand-logo { width: 120px; }
+      .header-contact { grid-column: 2; grid-row: 1; padding: 11px 14px; }
 
       nav {
+        grid-row: 2;
+        grid-column: 1 / -1;
         width: 100%;
         min-width: 0;
         max-width: 100%;
-        padding-bottom: 2px;
-        gap: 16px;
-        overflow-x: auto;
-        scrollbar-width: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0 12px;
       }
 
-      nav::-webkit-scrollbar { display: none; }
-      nav a { flex: 0 0 auto; font-size: 9px; }
+      nav a { display: inline-flex; align-items: center; min-height: 44px; flex: 0 0 auto; font-size: 10px; letter-spacing: 0.06em; padding: 12px 0; }
+      nav .secondary-nav { display: none; }
 
       .hero { min-height: 730px; }
 
@@ -883,6 +965,11 @@
       .footer-inner { flex-direction: column; }
     }
 
+    @media (max-width: 360px) {
+      nav { gap: 0 8px; }
+      nav a { letter-spacing: 0; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
     }
@@ -890,25 +977,26 @@
 </head>
 
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 <header>
   <div class="nav-wrap">
-    <a href="#top" aria-label="VAA Resources home">
-      <img class="brand-logo" src="/images/vaa-resources-logo.jpg" alt="VAA Resources">
+    <a class="brand-link" href="#top" aria-label="VAA Resources home">
+      <img class="brand-logo" src="/images/vaa-resources-logo.jpg" alt="VAA Resources" width="1200" height="800">
     </a>
 
     <nav aria-label="Primary navigation">
-      <a href="#about">About</a>
+      <a class="secondary-nav" href="#about">About</a>
       <a href="#reprocessing">Gold Reprocessing</a>
       <a href="#holleton">Holleton</a>
-      <a href="#leadership">Leadership</a>
+      <a class="secondary-nav" href="#leadership">Leadership</a>
       <a href="#partnerships">Partnerships</a>
-      <a href="#safety">Safety</a>
-      <a href="#contact">Contact</a>
+      <a class="secondary-nav" href="#safety">Safety</a>
     </nav>
+    <a class="header-contact" href="#contact">Contact</a>
   </div>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
   <section class="hero">
     <figure class="hero-media" aria-hidden="true">
       <img
@@ -924,12 +1012,15 @@
         <p class="eyebrow">VAA Resources / Western Australia</p>
         <h1>Gold reprocessing in Western Australia</h1>
         <p>
-          VAA Resources Pty Ltd is focused on assessing and developing gold-reprocessing
-          pathways for previously mined and historically treated gold-bearing material.
-          Our work combines material assessment, processing evaluation and responsible
-          project planning.
+          VAA Resources is a Western Australian gold reprocessing company. Our focus
+          is recovering gold from material left by earlier mining and processing
+          activities. We combine our own earthmoving equipment and practical expertise
+          with material assessment, processing studies and project planning.
         </p>
-        <a class="text-link" href="#reprocessing">See VAA's reprocessing approach →</a>
+        <div class="hero-actions">
+          <a class="hero-button" href="#contact">Discuss a project →</a>
+          <a class="text-link" href="#reprocessing">How we approach gold reprocessing →</a>
+        </div>
       </div>
     </div>
 
@@ -945,31 +1036,33 @@
       <div class="about-grid">
         <div class="about-copy">
           <p class="eyebrow">01 / About VAA Resources</p>
-          <h2>Integrated capability built around gold recovery</h2>
+          <h2>Gold recovery is the focus. Practical capability supports it.</h2>
           <p>
-            VAA Resources Pty Ltd is a Western Australian gold reprocessing company.
-            Our primary focus is assessing previously mined and historically treated
-            gold-bearing material and developing practical pathways for gold recovery.
+            Earlier mining and treatment can leave gold in the material that remains.
+            Reprocessing starts with understanding that material and assessing whether
+            a suitable recovery method can be applied.
           </p>
           <p>
-            Material assessment, plant preparation, field operations, mineral processing,
-            approvals planning and technical management are brought together across
-            assessment, project planning and operational preparation.
+            VAA brings material assessment and mineral-processing evaluation together
+            with its own earthmoving equipment, field experience and project planning.
+            Our current work at <a href="#holleton">Holleton</a> is at the evaluation
+            and planning stage, with technical studies and approval requirements
+            informing the next steps.
           </p>
         </div>
 
         <aside class="company-definition" aria-label="VAA Resources company focus">
           <div class="definition-row">
             <span>What we do</span>
-            <strong>Reprocess previously mined and historically treated gold-bearing material.</strong>
+            <strong>Gold reprocessing focused on previously mined and historically treated material.</strong>
           </div>
           <div class="definition-row">
             <span>How we work</span>
-            <strong>Assess material, select a suitable pathway and prepare operations for recovery.</strong>
+            <strong>Assess the material, evaluate gold recovery and plan the project.</strong>
           </div>
           <div class="definition-row">
             <span>What we bring</span>
-            <strong>VAA combines its own earthmoving equipment with practical materials-handling, gold-reprocessing and project-delivery expertise.</strong>
+            <strong>Our own earthmoving equipment and practical gold-processing, materials-handling and project expertise.</strong>
           </div>
         </aside>
       </div>
@@ -981,12 +1074,12 @@
       <div class="section-head">
         <div>
           <p class="eyebrow">02 / Gold Reprocessing</p>
-          <h2>From previously mined material to recovery</h2>
+          <h2>Understand the material. Evaluate the recovery method.</h2>
         </div>
         <p class="lead">
-          VAA brings together material assessment, controlled preparation, processing
-          evaluation and site delivery to establish practical gold-recovery pathways
-          for previously mined and historically treated material.
+          The recovery method depends on the material. VAA's approach connects
+          sampling and material assessment with processing studies, then the
+          practical requirements of a project.
         </p>
       </div>
 
@@ -994,60 +1087,63 @@
         <article class="process-step">
           <div class="process-index">01</div>
           <div class="process-copy">
-            <h3>Material assessment &amp; preparation</h3>
+            <h3>Assess the material</h3>
             <p>
-              Gold-bearing material is assessed, sampled, classified and prepared to
-              determine a suitable reprocessing pathway.
+              Review the material's history, location and available sampling data.
+              Field investigation and characterisation help establish what further
+              sampling and processing work is needed.
             </p>
           </div>
           <figure class="process-figure">
             <img
-              src="/images/screening-plant.webp"
-              alt="Screening plant used to prepare gold-bearing material for reprocessing"
+              src="/images/holleton-drilling.webp"
+              alt="Field investigation equipment at the Holleton Gold Project"
               loading="lazy"
               decoding="async"
             >
-            <figcaption>Material preparation plant / operational equipment</figcaption>
+            <figcaption>Field investigation / Holleton Gold Project</figcaption>
           </figure>
         </article>
 
         <article class="process-step">
           <div class="process-index">02</div>
           <div class="process-copy">
-            <h3>Controlled materials handling</h3>
+            <h3>Evaluate gold recovery</h3>
             <p>
-              Stockpiles and feed material are managed to support traceability,
-              consistent preparation and efficient processing.
+              Assess processing options against the material's characteristics.
+              Sampling and processing studies inform the choice of preparation and
+              recovery methods, including whether crushing or screening is required.
             </p>
           </div>
           <figure class="process-figure">
             <img
-              src="/images/wheel-loader.webp"
-              alt="Wheel loader managing gold-bearing material within a reprocessing project"
+              src="/images/screening-plant.webp"
+              alt="Screening plant for material preparation"
               loading="lazy"
               decoding="async"
             >
-            <figcaption>Materials handling / feed management</figcaption>
+            <figcaption>Screening plant / material preparation equipment</figcaption>
           </figure>
         </article>
 
         <article class="process-step">
           <div class="process-index">03</div>
           <div class="process-copy">
-            <h3>Sizing for gold recovery</h3>
+            <h3>Plan and prepare the project</h3>
             <p>
-              Crushing and screening are used where required to prepare material for
-              downstream gold-recovery processes as part of VAA's reprocessing work.
+              Bring together materials handling, plant configuration, water management,
+              site infrastructure and approvals planning. Our own earthmoving
+              equipment and practical expertise support this work.
             </p>
           </div>
           <figure class="process-figure">
             <img
-              src="/images/mobile-crusher.webp"
-              alt="Mobile crusher preparing gold-bearing material for downstream recovery"
+              src="/images/wheel-loader.webp"
+              alt="Wheel loader used for materials handling"
               loading="lazy"
               decoding="async"
             >
-            <figcaption>Material sizing / downstream preparation</figcaption>
+            <figcaption>Earthmoving capability / materials handling</figcaption>
           </figure>
         </article>
       </div>
@@ -1067,11 +1163,53 @@
           <h3>Processing pathways suited to the material</h3>
         </div>
         <p>
-          VAA evaluates established and alternative mineral processing approaches
-          according to the characteristics of the gold-bearing material. Alternative
-          non-chemical approaches remain at an evaluation stage and support the
-          company's broader gold recovery objective.
+          VAA evaluates established and alternative mineral-processing approaches
+          according to the material's characteristics. Alternative non-chemical
+          approaches remain under evaluation. The choice of method and any project
+          development depend on technical findings, commercial assessment and
+          applicable approvals.
         </p>
+      </div>
+
+      <div class="material-questions" id="gold-reprocessing-questions">
+        <h3>Gold reprocessing: common questions</h3>
+        <details>
+          <summary>What is gold reprocessing?</summary>
+          <p>
+            Gold reprocessing involves treating material from earlier mining or
+            processing activities to recover remaining gold. It can involve historic
+            stockpiles or previously treated material, such as tailings. Sampling and
+            processing studies are needed to assess suitability; previous mining or
+            treatment alone does not establish a viable recovery project.
+          </p>
+        </details>
+        <details>
+          <summary>What gold-bearing material does VAA consider?</summary>
+          <p>
+            VAA's focus is previously mined and historically treated gold-bearing
+            material. At <a href="#holleton">Holleton</a>, the assessment concerns
+            lateritic material. Each enquiry is considered on its own material
+            characteristics, available information, site access and project requirements.
+          </p>
+        </details>
+        <details>
+          <summary>What stage is the Holleton Gold Project at?</summary>
+          <p>
+            Holleton is at the evaluation and planning stage. Work covers material
+            assessment, processing studies, site planning and approvals requirements.
+            Further development depends on the results of this work, commercial
+            assessment and applicable approvals.
+          </p>
+        </details>
+        <details>
+          <summary>What should I include in a material or project enquiry?</summary>
+          <p>
+            Include the location, material type, your relationship to the project and
+            any available sampling or processing information. A short, non-confidential
+            overview is enough to begin a discussion. Contact details are available in
+            <a href="#contact">corporate and project enquiries</a>.
+          </p>
+        </details>
       </div>
     </div>
   </section>
@@ -1094,9 +1232,9 @@
           <h2>A focused gold reprocessing project</h2>
         </div>
         <p class="lead">
-          At Holleton, VAA is advancing assessment and the development of a potential
-          reprocessing pathway for previously mined and historically treated gold-bearing
-          lateritic material within an established mining area.
+          At Holleton, VAA is assessing previously mined and historically treated
+          gold-bearing lateritic material within an established mining area. The
+          project is at the evaluation and planning stage.
         </p>
       </div>
 
@@ -1111,11 +1249,11 @@
         </div>
         <div>
           <span>Material</span>
-          <strong>Previously mined and historically treated</strong>
+          <strong>Previously mined and treated lateritic material</strong>
         </div>
         <div>
           <span>Project stage</span>
-          <strong>Evaluation, planning and development</strong>
+          <strong>Evaluation and planning</strong>
         </div>
       </div>
 
@@ -1154,12 +1292,14 @@
           The work is directed toward establishing a practical reprocessing pathway
           for Holleton's gold-bearing material. It includes material assessment,
           processing studies, water management, plant configuration, site infrastructure,
-          environmental planning and regulatory approvals.
+          environmental planning and regulatory approval requirements.
         </p>
         <p>
           Field investigation, survey and operational planning are used to refine
           the project layout and practical requirements for development, with an
           emphasis on working within established disturbance wherever practicable.
+          Further development depends on technical findings, commercial assessment
+          and applicable approvals.
         </p>
       </div>
     </div>
@@ -1241,16 +1381,15 @@
     <div class="investor-grid">
       <div class="investor-copy">
         <p class="eyebrow">05 / Gold Reprocessing Partnerships</p>
-        <h2>Partnering around gold-bearing material and reprocessing opportunities</h2>
+        <h2>Have gold-bearing material or a project to discuss?</h2>
         <p class="investor-text">
-          VAA Resources welcomes confidential commercial discussions with holders of
-          previously mined or historically treated gold-bearing material, project owners,
-          strategic partners and technical collaborators.
+          VAA welcomes commercial discussions with material holders, project owners
+          and technical collaborators about gold reprocessing.
         </p>
         <p class="investor-text">
-          We are particularly interested in project opportunities where VAA's processing
-          focus can be combined with suitable material, project access, technical
-          capability, equipment or processing expertise.
+          Relevant discussions include material assessment, project access, processing
+          studies, equipment and technical expertise. Each project is considered on
+          its own material characteristics and practical requirements.
         </p>
       </div>
 
@@ -1307,8 +1446,18 @@
           <p class="eyebrow">07 / Gold Reprocessing &amp; Corporate Enquiries</p>
           <h2>Discuss gold-bearing material with VAA</h2>
           <p class="lead">
-            Contact VAA regarding previously mined or historically treated gold-bearing
-            material, project partnerships or corporate matters.
+            Speak with VAA about gold-bearing material, project partnerships,
+            technical collaboration or corporate matters.
+          </p>
+          <a
+            class="contact-action"
+            href="mailto:corporate@vaaresources.com?subject=Gold%20Reprocessing%20Enquiry%20-%20VAA%20Resources"
+            onclick="gtag('event','corporate_email_click',{'event_category':'engagement','event_label':'contact_button'});"
+          >Email VAA →</a>
+          <p class="contact-guidance">
+            For material or project enquiries, include the location, material type
+            and any available sampling or processing information. Start with a brief,
+            non-confidential overview; detailed information can follow by agreement.
           </p>
           <div class="contact-details">
             <p><strong>Location</strong><span>Western Australia</span></p>
@@ -1333,6 +1482,8 @@
             class="contact-logo"
             src="/images/vaa-resources-logo.jpg"
             alt="VAA Resources"
+            width="1200"
+            height="800"
             loading="lazy"
             decoding="async"
           >
@@ -1350,7 +1501,13 @@
       ABN 17 698 155 912
     </div>
     <div>
-      <a href="/privacy.html">Privacy</a><br>
+      <div class="footer-links" aria-label="Company information">
+        <a href="#about">About</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#safety">Safety</a>
+        <a href="#gold-reprocessing-questions">Questions</a>
+        <a href="/privacy.html">Privacy</a>
+      </div>
       © 2026 VAA Resources Pty Ltd. All rights reserved.
     </div>
   </div>

@@ -2,14 +2,7 @@
 <html lang="en-AU">
 <head>
   <meta charset="UTF-8">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-029JV4R2LW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-029JV4R2LW');
-  </script>
+  <script src="/assets/site.js" defer></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#171a17">
@@ -19,7 +12,7 @@
   <title>VAA Resources | Western Australian Gold Reprocessing</title>
   <meta
     name="description"
-    content="Western Australian gold reprocessing company progressing Holleton through approvals and operational preparation. Explore the plan for Leary's Lament."
+    content="Western Australian gold reprocessing. Explore Holleton, where VAA has lodged an MDCP for a proposed 45,000-tonne conventional vat-leach campaign on M77/643."
   >
   <link rel="canonical" href="https://www.vaaresources.com/">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -240,7 +233,7 @@
 
     .hero {
       position: relative;
-      min-height: min(880px, calc(100svh - 76px));
+      min-height: 570px;
       padding: 0;
       overflow: hidden;
       color: var(--white);
@@ -274,7 +267,7 @@
       max-width: var(--max);
       min-height: inherit;
       margin: 0 auto;
-      padding: 104px 28px 150px;
+      padding: 62px 28px 106px;
       display: flex;
       align-items: flex-end;
     }
@@ -295,17 +288,17 @@
     .hero h1 {
       max-width: 850px;
       margin: 0;
-      font-size: clamp(54px, 8vw, 104px);
-      line-height: 0.93;
+      font-size: clamp(48px, 6.4vw, 80px);
+      line-height: 1.02;
       letter-spacing: -0.045em;
       text-wrap: balance;
     }
 
     .hero p {
-      max-width: 680px;
+      max-width: 650px;
       margin: 25px 0 0;
       color: rgba(251, 250, 246, 0.88);
-      font-size: clamp(17px, 1.7vw, 21px);
+      font-size: clamp(17px, 1.5vw, 19px);
       line-height: 1.65;
     }
 
@@ -376,6 +369,21 @@
 
     section.alt { background: var(--paper); }
     .content { max-width: var(--max); margin: 0 auto; }
+
+    .project-overview { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .project-overview h2 { font-size: clamp(36px, 4.2vw, 56px); }
+    .project-overview p:not(.eyebrow) { color: var(--muted); }
+    .project-overview img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+    .project-overview a { display: inline-block; padding: 10px 0; font-weight: 700; text-underline-offset: 5px; }
+    .project-status { margin: 22px 0; padding: 18px 0 18px 20px; border-left: 3px solid var(--clay); }
+    .project-status strong { color: var(--ink); }
+    .project-status p { margin: 8px 0 0; font-size: 15px; }
+    #holleton .project-register { margin: 36px 0 0; }
+    .enquiry-options { margin: 28px 0; border-top: 1px solid var(--line); }
+    .enquiry-options a { display: block; padding: 15px 0; border-bottom: 1px solid var(--line); color: var(--ink); font-weight: 700; text-underline-offset: 4px; }
+    .enquiry-options a:hover { color: var(--clay); }
+    .evaluation-box .research-copy p + p { margin-top: 14px; }
+    .evaluation-box a { display: inline-block; padding: 10px 0; color: var(--ink); font-weight: 700; text-underline-offset: 4px; }
 
     h2 {
       max-width: 920px;
@@ -721,9 +729,12 @@
       text-transform: uppercase;
     }
 
-    .update-copy h2 {
+    .company-update > .content > h2 { margin-bottom: 32px; font-size: 36px; }
+    .update-grid + .update-grid { margin-top: 28px; padding-top: 28px; border-top: 1px solid #cfc3af; }
+    .update-copy h3 {
       margin: 0;
       font-size: clamp(27px, 3vw, 38px);
+      line-height: 1.15;
     }
 
     .update-copy p {
@@ -871,6 +882,7 @@
 
       .section-head,
       .about-grid,
+      .project-overview,
       .focus-note,
       .evaluation-box,
       .project-copy,
@@ -922,9 +934,9 @@
       nav a { display: inline-flex; align-items: center; min-height: 44px; flex: 0 0 auto; font-size: 10px; letter-spacing: 0.06em; padding: 12px 0; }
       nav .secondary-nav { display: none; }
 
-      .hero { min-height: 730px; }
+      .hero { min-height: 0; }
 
-      .hero-grid { padding: 76px 20px 156px; }
+      .hero-grid { padding: 40px 20px 110px; }
 
       .hero-copy { width: calc(100vw - 40px); max-width: calc(100vw - 40px); }
       .hero p { width: 100%; max-width: 100%; }
@@ -935,7 +947,11 @@
           linear-gradient(0deg, rgba(19,21,18,0.94) 0%, rgba(19,21,18,0.28) 68%);
       }
 
-      .hero h1 { max-width: 100%; font-size: clamp(46px, 12.5vw, 56px); }
+      .hero h1 { max-width: 100%; font-size: clamp(42px, 11.5vw, 56px); }
+      .hero p { margin-top: 20px; line-height: 1.55; }
+      .hero-actions { margin-top: 24px; gap: 10px 22px; }
+      .hero-actions .text-link { font-size: 11px; }
+      .project-overview { gap: 30px; }
 
       .hero-meta {
         width: calc(100% - 40px);
@@ -995,9 +1011,9 @@
     </a>
 
     <nav aria-label="Primary navigation">
-      <a class="secondary-nav" href="#about">About</a>
-      <a href="#reprocessing">Gold Reprocessing</a>
       <a href="#holleton">Holleton</a>
+      <a href="#reprocessing">Gold Reprocessing</a>
+      <a class="secondary-nav" href="#about">About</a>
       <a class="secondary-nav" href="#leadership">Leadership</a>
       <a href="#partnerships">Partnerships</a>
       <a class="secondary-nav" href="#safety">Safety</a>
@@ -1022,18 +1038,13 @@
         <p class="eyebrow">VAA Resources / Western Australia</p>
         <h1>Gold reprocessing in Western Australia</h1>
         <p>
-          VAA Resources is a Western Australian gold reprocessing company. We are
-          progressing the Holleton Gold Project through approvals and operational
-          preparation, with a defined plan to reprocess historically mined and
-          treated gold-bearing material.
-        </p>
-        <p>
-          Our own earthmoving equipment and practical gold-processing expertise
-          support this work.
+          We focus on recovering gold from previously mined and treated material.
+          At Holleton, our proposed conventional vat-leach campaign is progressing
+          through the approvals process.
         </p>
         <div class="hero-actions">
-          <a class="hero-button" href="#contact">Discuss a project →</a>
-          <a class="text-link" href="#reprocessing">How we approach gold reprocessing →</a>
+          <a class="hero-button" href="/projects/learys-lament-holleton.html" data-placement="home_hero">Explore the Holleton Project →</a>
+          <a class="text-link" href="#contact">Contact VAA →</a>
         </div>
       </div>
     </div>
@@ -1045,11 +1056,55 @@
     </div>
   </section>
 
+  <section id="holleton">
+    <div class="content">
+      <div class="project-overview" id="learys-lament">
+        <div>
+          <p class="eyebrow">01 / Holleton Gold Project</p>
+          <h2>Leary's Lament.<br>A defined reprocessing plan.</h2>
+          <p>
+            At Holleton in Western Australia, VAA is progressing a conventional
+            vat-leach campaign to reprocess historically mined and treated
+            gold-bearing lateritic material.
+          </p>
+          <div class="project-status">
+            <strong>MDCP lodged · proposed 45,000-tonne campaign</strong>
+            <p>
+              VAA has lodged a Mining Development and Closure Proposal for the
+              proposed campaign on M77/643. Lodgement is a step in the approvals
+              process, not approval to commence.
+            </p>
+            <a href="/updates/holleton-mdcp-lodged-2026.html">Read the approvals update →</a>
+          </div>
+          <p>
+            Commencement remains subject to the required approvals and conditions,
+            supporting technical work, funding and operational readiness.
+          </p>
+          <a href="/projects/learys-lament-holleton.html" data-placement="home_project">Explore the project and proposed campaign →</a>
+        </div>
+        <figure>
+          <img src="/images/holleton-site-september-2026.webp"
+            srcset="/images/holleton-site-september-2026-small.webp 900w, /images/holleton-site-september-2026.webp 1800w"
+            sizes="(max-width: 980px) 100vw, 50vw"
+            alt="Aerial view of historic workings, personnel, a loader and a grader at Holleton"
+            width="1800" height="1349" loading="lazy" decoding="async">
+          <figcaption>Holleton / site and equipment / September 2026</figcaption>
+        </figure>
+      </div>
+      <div class="project-register" aria-label="Holleton project register">
+        <div><span>Location</span><strong>Holleton, Western Australia</strong></div>
+        <div><span>Project tenements</span><strong>M77/643 &amp; M77/898</strong></div>
+        <div><span>Proposed campaign</span><strong>45,000 tonnes on M77/643</strong></div>
+        <div><span>Current stage</span><strong>MDCP lodged; approvals and preparation</strong></div>
+      </div>
+    </div>
+  </section>
+
   <section id="about">
     <div class="content">
       <div class="about-grid">
         <div class="about-copy">
-          <p class="eyebrow">01 / About VAA Resources</p>
+          <p class="eyebrow">02 / About VAA Resources</p>
           <h2>Gold recovery is the focus. Practical capability supports it.</h2>
           <p>
             Earlier mining and treatment can leave gold in the material that remains.
@@ -1059,10 +1114,8 @@
           <p>
             VAA brings material assessment and mineral-processing evaluation together
             with its own earthmoving equipment, field experience and project planning.
-            At <a href="#holleton">Holleton</a>, we are progressing a defined
-            reprocessing plan through approvals and operational preparation.
-            Commencement remains subject to the required approvals and conditions,
-            supporting technical work and operational readiness.
+            Our equipment and practical expertise support our own gold-reprocessing
+            projects, from material handling through to operational preparation.
           </p>
         </div>
 
@@ -1088,7 +1141,7 @@
     <div class="content">
       <div class="section-head">
         <div>
-          <p class="eyebrow">02 / Gold Reprocessing</p>
+          <p class="eyebrow">03 / Gold Reprocessing</p>
           <h2>A planned approach to gold reprocessing</h2>
         </div>
         <p class="lead">
@@ -1153,12 +1206,15 @@
           </div>
           <figure class="process-figure">
             <img
-              src="/images/wheel-loader.webp"
-              alt="Wheel loader used for materials handling"
+              src="/images/holleton-loader-september-2026.webp"
+              srcset="/images/holleton-loader-september-2026-small.webp 600w, /images/holleton-loader-september-2026.webp 1200w"
+              sizes="(max-width: 760px) 100vw, 50vw"
+              alt="VAA's wheel loader at the Holleton site"
+              width="1200" height="899"
               loading="lazy"
               decoding="async"
             >
-            <figcaption>Earthmoving capability / materials handling</figcaption>
+            <figcaption>Our earthmoving capability / Holleton / September 2026</figcaption>
           </figure>
         </article>
       </div>
@@ -1175,15 +1231,25 @@
       <div class="evaluation-box" id="processing-evaluation">
         <div>
           <p class="eyebrow">Separate research and development</p>
-          <h3>Alternative beneficiation research</h3>
+          <h3>FRABEN — processing technology in development</h3>
+          <p>Fractionate and Beneficiate</p>
         </div>
-        <p>
-          Alongside the planned conventional vat-leaching project, VAA is evaluating
-          alternative beneficiation approaches to preparing and concentrating
-          gold-bearing material. This is a separate research and development activity;
-          it is not the basis of the planned operation at Leary's Lament. Any application
-          depends on technical validation, commercial assessment and applicable approvals.
-        </p>
+        <div class="research-copy">
+          <p>
+            VAA's FRABEN programme is focused on developing a portable process to
+            produce a gold-bearing concentrate without adding chemical reagents
+            during the separation stage. The development objective is to reduce
+            the quantity of material requiring downstream treatment while retaining
+            gold in the concentrated fraction.
+          </p>
+          <p>
+            FRABEN is a separate development programme alongside the proposed
+            conventional vat-leach campaign at Holleton. Its application depends on
+            material suitability, demonstrated performance, commercial assessment
+            and applicable approvals.
+          </p>
+          <a href="/projects/learys-lament-holleton.html#fraben" data-placement="home_fraben">About the FRABEN programme →</a>
+        </div>
       </div>
 
       <div class="material-questions" id="gold-reprocessing-questions">
@@ -1210,11 +1276,12 @@
         <details>
           <summary>What stage is the Holleton Gold Project at?</summary>
           <p>
-            Holleton is in the approvals and operational preparation stage, with a
-            defined plan for conventional vat leaching at
-            <a href="/projects/learys-lament-holleton.html">Leary's Lament</a>.
-            Commencement remains subject to the required approvals and conditions,
-            completion of supporting technical work and operational readiness.
+            VAA has lodged an MDCP for a proposed 45,000-tonne conventional
+            vat-leach campaign on M77/643 at
+            <a href="/projects/learys-lament-holleton.html">Leary's Lament, Holleton</a>.
+            Lodgement does not constitute approval to commence. Commencement remains
+            subject to required approvals and conditions, supporting technical work,
+            funding and operational readiness.
           </p>
         </details>
         <details>
@@ -1226,115 +1293,6 @@
             <a href="#contact">corporate and project enquiries</a>.
           </p>
         </details>
-      </div>
-    </div>
-  </section>
-
-  <section id="holleton">
-    <div class="content">
-      <figure class="project-banner">
-        <img
-          src="/images/holleton-aerial-landscape.webp"
-          alt="Aerial survey view across the Holleton Gold Project landscape"
-          loading="lazy"
-          decoding="async"
-        >
-        <figcaption>Holleton / aerial field survey / April 2026</figcaption>
-      </figure>
-
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">03 / Holleton Gold Project</p>
-          <h2>A focused gold reprocessing project</h2>
-        </div>
-        <p class="lead">
-          At Holleton, VAA is progressing a plan to reprocess historically mined
-          and treated gold-bearing lateritic material within an established mining
-          area. The project is in the approvals and operational preparation stage.
-        </p>
-      </div>
-
-      <div class="project-register" aria-label="Holleton project register">
-        <div>
-          <span>Location</span>
-          <strong>Western Australia</strong>
-        </div>
-        <div>
-          <span>Tenements</span>
-          <strong>M77/643 &amp; M77/898</strong>
-        </div>
-        <div>
-          <span>Material</span>
-          <strong>Previously mined and treated lateritic material</strong>
-        </div>
-        <div>
-          <span>Project stage</span>
-          <strong>Approvals and operational preparation</strong>
-        </div>
-      </div>
-
-      <div class="project-detail" id="learys-lament">
-        <p class="eyebrow">The planned operation</p>
-        <h3>Leary's Lament at Holleton</h3>
-        <p>
-          The plan centres on reprocessing historically mined and heap-leached
-          material using conventional vat leaching. Historical operating records
-          and recent laboratory assay information inform material selection and
-          processing preparation.
-        </p>
-        <p>
-          VAA is coordinating approvals and operational preparation, supported by
-          its own earthmoving equipment and practical site expertise. Commencement
-          remains subject to the required approvals and conditions, completion of
-          supporting technical work and operational readiness.
-        </p>
-        <a href="/projects/learys-lament-holleton.html">Explore the Leary's Lament reprocessing plan →</a>
-      </div>
-
-      <div class="project-grid">
-        <figure class="project-panel">
-          <img
-            src="/images/holleton-aerial-plan.webp"
-            alt="Vertical aerial survey of the Holleton Gold Project showing historic workings and surrounding terrain"
-            loading="lazy"
-            decoding="async"
-          >
-          <figcaption>Historic workings and surrounding terrain / vertical aerial survey</figcaption>
-        </figure>
-        <figure class="project-panel">
-          <img
-            src="/images/holleton-drilling.webp"
-            alt="Field investigation at the Holleton Gold Project in Western Australia"
-            loading="lazy"
-            decoding="async"
-          >
-          <figcaption>Field investigation / Holleton Gold Project</figcaption>
-        </figure>
-        <figure class="project-panel map">
-          <img
-            src="/images/holleton-tenement.webp"
-            alt="Aerial view of the Holleton Gold Project and mining tenements M77/643 and M77/898"
-            loading="lazy"
-            decoding="async"
-          >
-          <figcaption>Tenement context / M77/643 and M77/898</figcaption>
-        </figure>
-      </div>
-
-      <div class="project-copy">
-        <p>
-          Current work is directed toward progressing the Holleton reprocessing
-          plan through approvals and operational preparation. It brings together
-          material assessment, supporting processing studies, water management,
-          plant configuration, site infrastructure and environmental planning.
-        </p>
-        <p>
-          Field investigation, survey and operational planning are used to refine
-          the project layout and practical requirements for development, with an
-          emphasis on working within established disturbance wherever practicable.
-          The plan remains subject to technical findings, commercial assessment,
-          the required approvals and conditions, and operational readiness.
-        </p>
       </div>
     </div>
   </section>
@@ -1391,10 +1349,23 @@
 
   <section id="company-update" class="company-update" aria-labelledby="company-update-title">
     <div class="content">
+      <h2 id="company-update-title">Company updates</h2>
       <div class="update-grid">
-        <div class="update-date">Company update<br>13–14 October 2026</div>
+        <div class="update-date">Project update<br><time datetime="2026-09-22">22 September 2026</time></div>
         <div class="update-copy">
-          <h2 id="company-update-title">VAA attending 121 Mining Investment Global Online</h2>
+          <h3>MDCP lodged for the proposed Holleton campaign</h3>
+          <p>
+            The proposal covers a 45,000-tonne conventional vat-leach campaign on
+            M77/643. Lodgement is a step in the approvals process, not approval
+            to commence.
+          </p>
+        </div>
+        <a class="update-link" href="/updates/holleton-mdcp-lodged-2026.html">MDCP UPDATE →</a>
+      </div>
+      <div class="update-grid">
+        <div class="update-date">Industry event<br>13–14 October 2026</div>
+        <div class="update-copy">
+          <h3>VAA attending 121 Mining Investment Global Online</h3>
           <p>
             VAA Resources will participate in scheduled industry meetings, discussing
             its Western Australian gold-reprocessing focus, project development and
@@ -1431,7 +1402,7 @@
         <a
           class="investor-button"
           href="mailto:corporate@vaaresources.com?subject=Confidential%20Gold%20Reprocessing%20Enquiry%20-%20VAA%20Resources"
-          onclick="gtag('event','investor_enquiry_click',{'event_category':'engagement','event_label':'partnerships'});"
+          data-enquiry-type="project" data-placement="home_partnerships"
         >
           GOLD REPROCESSING ENQUIRY →
         </a>
@@ -1478,16 +1449,20 @@
       <div class="contact-grid">
         <div>
           <p class="eyebrow">07 / Gold Reprocessing &amp; Corporate Enquiries</p>
-          <h2>Discuss gold-bearing material with VAA</h2>
+          <h2>Start a conversation with VAA</h2>
           <p class="lead">
             Speak with VAA about gold-bearing material, project partnerships,
             technical collaboration or corporate matters.
           </p>
-          <a
-            class="contact-action"
-            href="mailto:corporate@vaaresources.com?subject=Gold%20Reprocessing%20Enquiry%20-%20VAA%20Resources"
-            onclick="gtag('event','corporate_email_click',{'event_category':'engagement','event_label':'contact_button'});"
-          >Email VAA →</a>
+          <div class="enquiry-options" aria-label="Email enquiry topics">
+            <a href="mailto:corporate@vaaresources.com?subject=Material%20or%20Project%20Enquiry%20-%20VAA%20Resources"
+              data-enquiry-type="project" data-placement="home_contact">Material or project enquiries →</a>
+            <a href="mailto:corporate@vaaresources.com?subject=Technical%20or%20Commercial%20Partnership%20-%20VAA%20Resources"
+              data-enquiry-type="technical" data-placement="home_contact">Technical and commercial partnerships →</a>
+            <a href="mailto:corporate@vaaresources.com?subject=Corporate%20or%20Industry%20Meeting%20-%20VAA%20Resources"
+              data-enquiry-type="corporate" data-placement="home_contact">Corporate and industry meeting enquiries →</a>
+          </div>
+          <p>These links open your email app. You can also email us directly at the address below.</p>
           <p class="contact-guidance">
             For material or project enquiries, include the location, material type
             and any available sampling or processing information. Start with a brief,
@@ -1500,7 +1475,7 @@
               <span>
                 <a
                   href="mailto:corporate@vaaresources.com?subject=Corporate%20Enquiry%20-%20VAA%20Resources"
-                  onclick="gtag('event','corporate_email_click',{'event_category':'engagement','event_label':'contact'});"
+                  data-enquiry-type="corporate" data-placement="home_email_address"
                 >
                   corporate@vaaresources.com
                 </a>

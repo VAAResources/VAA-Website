@@ -33,6 +33,8 @@
         });
       } else if (destination.origin === window.location.origin && destination.pathname === '/projects/learys-lament-holleton.html' && window.location.pathname !== destination.pathname) {
         window.gtag('event', 'project_details_click', context);
+      } else if (destination.origin === window.location.origin && destination.pathname === '/technology/fraben.html' && window.location.pathname !== destination.pathname) {
+        window.gtag('event', 'fraben_details_click', context);
       }
     } catch (_) {
       // Measurement must never interrupt navigation or opening an email app.

@@ -79,6 +79,9 @@ test('Every local link, fragment, script, image and CSS image reference resolves
       assert.ok(Object.hasOwn(image, 'alt'), `${file}: image missing alt`);
       for (const candidate of (image.srcset || '').split(',').filter(Boolean)) check(file, candidate.trim().split(/\s+/)[0]);
     }
+    for (const preload of tags(source, 'link').filter(tag => tag.as === 'image')) {
+      for (const candidate of (preload.imagesrcset || '').split(',').filter(Boolean)) check(file, candidate.trim().split(/\s+/)[0]);
+    }
     for (const match of source.matchAll(/url\(\s*["']?([^\s)"']+)["']?\s*\)/gi)) check(file, match[1]);
   }
 });
@@ -193,4 +196,69 @@ test('An Analytics failure cannot throw from a contact or project click', () => 
   site.window.gtag = () => { throw new Error('Analytics unavailable'); };
   assert.doesNotThrow(() => site.click('mailto:corporate@vaaresources.com'));
   assert.doesNotThrow(() => site.click(projectPath));
+  assert.doesNotThrow(() => site.click('/technology/fraben.html'));
+});
+
+test('FRABEN navigation is tracked without double-counting same-page or external links', () => {
+  const home = browser();
+  home.click('/technology/fraben.html?ignored=secret#technical-enquiries', { placement: 'home_fraben' });
+  assert.equal(home.events().length, 1);
+  assert.equal(home.events()[0][1], 'fraben_details_click');
+  assert.deepEqual(JSON.parse(JSON.stringify(home.events()[0][2])), { placement: 'home_fraben', page_path: '/' });
+  home.click('https://example.com/technology/fraben.html');
+  assert.equal(home.events().length, 1);
+  const fraben = browser(`${origin}/technology/fraben.html`);
+  fraben.click('#technical-enquiries');
+  fraben.click('/technology/fraben.html');
+  assert.equal(fraben.events().length, 0);
+});
+
+test('Public approvals copy stays general and 121 copy reflects the completed event', () => {
+  for (const [file, source] of html) {
+    const text = source.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
+      .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '').replace(/<[^>]*>/g, ' ');
+    assert.doesNotMatch(text, /\bMDCP\b|Mining Development and Closure Proposal|REG210918|APP-0038487|GWL214332|60.?90 business days/i, file);
+    for (const meta of tags(source, 'meta')) {
+      if (/description/.test(meta.name || meta.property || '')) {
+        assert.doesNotMatch(meta.content, /MDCP|lodged|lodgement/i, `${file}: detailed approval metadata`);
+      }
+    }
+  }
+  const event = html.get('updates/121-mining-investment-global-online-2026.html');
+  assert.doesNotMatch(event, /will attend|will participate|VAA attending|VAA will discuss|ahead of the|EventScheduled/i);
+  assert.match(event, /completed its participation/i);
+  assert.match(event, /strong interest/i);
+  assert.match(event, /"datePublished": "2026-09-03"/);
+  assert.match(event, /"dateModified": "2026-10-17"/);
+  assert.match(event, /corporate@vaaresources.com/);
+});
+
+test('FRABEN has its own discoverable page with separation-stage and development context', () => {
+  const target = '/technology/fraben.html';
+  for (const file of ['index.html', 'projects/learys-lament-holleton.html', 'updates/121-mining-investment-global-online-2026.html']) {
+    assert.ok(tags(html.get(file), 'a').some(a => a.href === target), `${file}: FRABEN link missing`);
+  }
+  const source = html.get('technology/fraben.html');
+  assert.match(source, /without adding chemical reagents during the separation stage/);
+  assert.match(source, /separate technology-development programme/);
+  assert.match(source, /may use chemical reagents/);
+  assert.match(source, /data-enquiry-type="technical" data-placement="fraben_contact"/);
+  assert.doesNotMatch(source, /guaranteed|commercially proven|patented|\d+\s*%\s*recovery/i);
+  assert.ok(ids(html.get('projects/learys-lament-holleton.html')).includes('fraben'), 'Preserve earlier shared FRABEN anchor');
+});
+
+test('Home hero preload and image share lighter responsive variants', () => {
+  const source = html.get('index.html');
+  const hero = tags(source, 'img').find(img => img.src === '/images/holleton-aerial-hero.webp');
+  const preload = tags(source, 'link').find(link => link.as === 'image');
+  assert.equal(hero.srcset, preload.imagesrcset);
+  assert.equal(hero.sizes, preload.imagesizes);
+  assert.equal(hero.fetchpriority, 'high');
+  assert.equal(hero.width, '2400');
+  assert.equal(hero.height, '1798');
+  assert.match(hero.srcset, /small.webp 800w/);
+  assert.match(hero.srcset, /medium.webp 1600w/);
+  const original = fs.statSync(path.join(root, 'images/holleton-aerial-hero.webp')).size;
+  assert.ok(fs.statSync(path.join(root, 'images/holleton-aerial-hero-small.webp')).size < original * 0.25);
+  assert.ok(fs.statSync(path.join(root, 'images/holleton-aerial-hero-medium.webp')).size < original * 0.5);
 });

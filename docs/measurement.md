@@ -11,6 +11,7 @@ without JavaScript and if Analytics is blocked.
 | --- | --- | --- |
 | `corporate_email_click` | One activation of a corporate mailto link | `enquiry_type`, `placement`, `page_path` |
 | `project_details_click` | Navigation from another page to the Holleton project page | `placement`, `page_path` |
+| `fraben_details_click` | Navigation from another page to the dedicated FRABEN page | `placement`, `page_path` |
 
 The former `investor_enquiry_click` was attached to a material/project enquiry
 link, not an investment application. New clicks use `corporate_email_click`.
@@ -28,8 +29,8 @@ Google Analytics page/session measurement remains in place.
 - Register `enquiry_type` and `placement` as event-scoped custom dimensions in
   GA4 if those breakdowns are required in reports/explorations. Registration is
   not performed by website code and reporting is not retroactive.
-- Do not mark `project_details_click` as a business conversion: it measures
-  progression from overview to project detail, not an enquiry.
+- Do not mark `project_details_click` or `fraben_details_click` as business
+  conversions: they measure progression to more information, not enquiries.
 - Email clicks open an email application; they do not verify sending or delivery.
   Record actual enquiries separately and distinguish internal tests from visitors.
 - Compare consistent date ranges, channel/landing-page performance and confirmed
@@ -39,3 +40,21 @@ Google Analytics page/session measurement remains in place.
 Google references:
 - https://developers.google.com/analytics/devguides/collection/ga4/event-parameters
 - https://support.google.com/analytics/answer/13128484
+
+## October 2026 follow-up
+
+The public site now separates the FRABEN development programme from the Holleton
+campaign. Contact clicks from the FRABEN page retain `enquiry_type=technical`
+and use `placement=fraben_contact`. No Google Analytics Admin settings were changed.
+
+On 17 October, Search Console in the signed-in corporate browser showed the
+existing VAA URL-prefix property as requiring ownership verification, not a
+performance report. Query, impression and ranking data could not be reviewed.
+Finish verification using an authorised account, or obtain access to an already
+verified property, before assessing search changes. No verification tokens,
+DNS records or account permissions were changed in this release.
+
+Once access is available, compare equal periods and separate branded searches
+(VAA, FRABEN, Holleton, Leary's Lament) from broader gold-reprocessing searches.
+Track actual enquiries separately from email clicks. At this traffic level,
+monthly review is more useful than interpreting individual daily fluctuations.

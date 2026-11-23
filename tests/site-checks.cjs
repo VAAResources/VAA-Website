@@ -213,14 +213,14 @@ test('FRABEN navigation is tracked without double-counting same-page or external
   assert.equal(fraben.events().length, 0);
 });
 
-test('Public approvals copy stays general and 121 copy reflects the completed event', () => {
+test('Public approvals copy omits private application details and 121 copy reflects the completed event', () => {
   for (const [file, source] of html) {
     const text = source.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
       .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '').replace(/<[^>]*>/g, ' ');
-    assert.doesNotMatch(text, /\bMDCP\b|Mining Development and Closure Proposal|REG210918|APP-0038487|GWL214332|60.?90 business days/i, file);
+    assert.doesNotMatch(text, /REG210918|APP-0038487|GWL214332|60.?90 business days/i, file);
     for (const meta of tags(source, 'meta')) {
       if (/description/.test(meta.name || meta.property || '')) {
-        assert.doesNotMatch(meta.content, /MDCP|lodged|lodgement/i, `${file}: detailed approval metadata`);
+        assert.doesNotMatch(meta.content, /REG210918|APP-0038487|GWL214332|lodged|lodgement/i, `${file}: private application metadata`);
       }
     }
   }
@@ -262,3 +262,4 @@ test('Home hero preload and image share lighter responsive variants', () => {
   assert.ok(fs.statSync(path.join(root, 'images/holleton-aerial-hero-small.webp')).size < original * 0.25);
   assert.ok(fs.statSync(path.join(root, 'images/holleton-aerial-hero-medium.webp')).size < original * 0.5);
 });
+

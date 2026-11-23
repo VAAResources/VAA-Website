@@ -370,13 +370,18 @@
     section.alt { background: var(--paper); }
     .content { max-width: var(--max); margin: 0 auto; }
 
-    .project-overview { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .project-overview { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 56px; align-items: start; }
     .project-overview h2 { font-size: clamp(36px, 4.2vw, 56px); }
     .project-overview p:not(.eyebrow) { color: var(--muted); }
-    .project-overview img { width: 100%; height: auto; }
-    .project-overview figcaption a { padding-bottom: 0; font-size: 14px; letter-spacing: normal; text-transform: none; }
     .project-overview a { display: inline-block; padding: 10px 0; font-weight: 700; text-underline-offset: 5px; }
-    .project-status { margin: 22px 0; padding: 18px 0 18px 20px; border-left: 3px solid var(--clay); }
+    .project-gallery { grid-column: 1 / -1; }
+    .project-gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .project-gallery figure { background: var(--paper); border-bottom: 1px solid var(--line); }
+    .project-gallery img { width: 100%; height: auto; aspect-ratio: 672 / 390; object-fit: contain; }
+    .project-gallery figcaption { padding: 14px 16px 16px; color: var(--muted); font-size: 15px; letter-spacing: normal; text-transform: none; }
+    .project-gallery figcaption strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: 17px; }
+    .project-gallery > a { margin-top: 8px; }
+    .project-status { padding: 18px 0 18px 20px; border-left: 3px solid var(--clay); }
     .project-status strong { color: var(--ink); }
     .project-status p { margin: 8px 0 0; font-size: 15px; }
     #holleton .project-register { margin: 36px 0 0; }
@@ -952,7 +957,8 @@
       .hero p { margin-top: 20px; line-height: 1.55; }
       .hero-actions { margin-top: 24px; gap: 10px 22px; }
       .hero-actions .text-link { font-size: 11px; }
-      .project-overview { gap: 30px; }
+      .project-overview { gap: 24px; }
+      .project-gallery-grid { grid-template-columns: 1fr; gap: 18px; }
 
       .hero-meta {
         width: calc(100% - 40px);
@@ -1072,27 +1078,41 @@
             material for VAA’s proposed campaign. The plan is to treat up to 45,000
             tonnes of previously treated laterite by conventional vat leaching on M77/643.
           </p>
-          <div class="project-status">
-            <strong>MDCP approved · Project preparation progressing</strong>
-            <p>
-              The Mine Development and Closure Proposal (MDCP) was approved on
-              16 November 2026 for the proposed campaign on M77/643.
-              VAA is progressing technical and site preparations while DWER assesses
-              the works approval application.
-            </p>
-            <a href="/updates/holleton-mdcp-lodged-2026.html">Read the project update →</a>
-          </div>
           <a href="/projects/learys-lament-holleton.html" data-placement="home_project">Explore the project and proposed campaign →</a>
         </div>
-        <figure>
-          <img src="/images/holleton-drone-terrain.jpg"
-            alt="Angled drone survey model showing the historic South Pit and heap-leach pads at Leary's Lament"
-            width="672" height="390" loading="lazy" decoding="async">
-          <figcaption>
-            Leary’s Lament / VAA 2026 drone survey model<br>
-            <a href="/projects/learys-lament-holleton.html#site-views" data-placement="home_site_views">See the surface and subsurface views</a>
-          </figcaption>
-        </figure>
+        <div class="project-status">
+          <strong>MDCP approved · Project preparation progressing</strong>
+          <p>
+            The Mine Development and Closure Proposal (MDCP) was approved on
+            16 November 2026 for the proposed campaign on M77/643.
+            VAA is progressing technical and site preparations while DWER assesses
+            the works approval application.
+          </p>
+          <a href="/updates/holleton-mdcp-lodged-2026.html">Read the project update →</a>
+        </div>
+        <div class="project-gallery" id="holleton-views">
+          <div class="project-gallery-grid">
+            <figure>
+              <img src="/images/holleton-drone-terrain.jpg" width="672" height="390"
+                alt="Angled drone survey model showing the historic South Pit and heap-leach pads at Leary’s Lament"
+                loading="lazy" decoding="async">
+              <figcaption>
+                <strong>Above the surface</strong>
+                Historic South Pit and heap-leach pads from VAA’s 2026 drone survey model.
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="/images/holleton-subsurface-colour.jpg" width="744" height="432"
+                alt="3D view below Leary’s Lament with historical assay points and gold, orange and red modelled shapes"
+                loading="lazy" decoding="async">
+              <figcaption>
+                <strong>Below the surface · Historical drilling interpretation</strong>
+                Coloured shapes show modelled grades between historical assay points. Vertical scale is exaggerated 2×.
+              </figcaption>
+            </figure>
+          </div>
+          <a href="/projects/learys-lament-holleton.html#site-views" data-placement="home_site_views">Explore the Holleton site views</a>
+        </div>
       </div>
       <div class="project-register" aria-label="Holleton project register">
         <div><span>Location</span><strong>Holleton, Western Australia</strong></div>
